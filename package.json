@@ -19,7 +19,9 @@
   "dependencies": {
     "body-parser": "^1.15.2",
     "ejs": "^2.5.5",
+    "express": "^4.14.0",
     "firebase": "^3.6.4",
-    "sendgrid": "^4.7.1"
+    "sendgrid": "^4.7.1",
+    "validator": "^6.2.0"
   }
 }
