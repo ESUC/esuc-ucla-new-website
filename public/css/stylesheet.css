@@ -21,9 +21,51 @@ main {
 
 nav {
 	height: 100px;
-	display:none;
 	position: fixed;
+	background-color: rgba(255,255,255,0.0);
 }
+
+.nav-wrapper{
+    color: yellow;
+}
+
+@keyframes color_up {
+    from {
+        background-color: rgba(255,255,255,0.0);
+        color: yellow;
+    }
+    to {
+        background-color: rgba(255,255,255,1.0);
+        color: gray;
+    }
+}
+
+#increaseOpacity{
+	animation-name: color_up;
+	animation-duration: 2s;
+	animation-direction: normal;
+	animation-timing-function: ease-in-out;
+	background-color: rgba(255, 255, 255, 1.0);
+	color: gray !important;
+}
+
+#increaseOpacity a{
+	color: gray;
+}
+
+#decreaseOpacity{
+	animation-name: color_up;
+	animation-duration: 2s;
+	animation-direction: reverse;
+	animation-timing-function: ease-in-out;
+	background-color: rgba(255, 255, 255, 0.0);
+	color: yellow !important;
+}
+
+#decreaseOpacity a{
+	color: yellow;
+}
+
 
 nav img {
 	max-height: 100px;
@@ -31,9 +73,27 @@ nav img {
 }
 
 nav ul a {
-	color: grey;
+	color: yellow;
 }
 nav ul {
 	padding: 15px;
+}
+
+#landing {
+	color: yellow;
+	background-image: url('/img/engineering-building.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+#landing-menu ul li {
+	display: inline;
+	width: 10%;
+	padding: 15px;
+	font-size: 1.3em;
+}
+
+#about {
+	background-color: black;
 }
 

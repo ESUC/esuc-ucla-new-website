@@ -14,12 +14,25 @@
  		});
  	});
 
+ 	var landing_height = $('#landing').outerHeight();
+ 	console.log(landing_height);
+ 	var nav_changed = false;
+
  	$(window).scroll(function() {
- 		if ($(window).scrollTop() + $(window).height() < 1000){
- 			$('nav').hide();
+ 		console.log($(window).scrollTop() + $(window).height());
+ 		if (($(window).scrollTop() + $(window).height()) <= 1.8 * landing_height){
+ 			if (nav_changed == true){
+ 				console.log("height less");
+ 				$('.nav-wrapper').prop('id', 'decreaseOpacity');
+ 				nav_changed = false;
+ 			}
  		} 
  		else {
- 			$('nav').css("display", "block");
+ 			if (nav_changed == false){
+ 				$('.nav-wrapper').prop('id', 'increaseOpacity');
+ 				nav_changed = true;
+ 			}
+ 			
  		}
  	});
 
