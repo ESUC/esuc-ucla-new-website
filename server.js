@@ -9,7 +9,7 @@ var sendgrid  = require('sendgrid')('esuc-ucla2016', 'esuc2016');
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-app.use(express.static('static'));
+app.use(express.static('public'));
 app.engine('.html', require('ejs').__express);
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
