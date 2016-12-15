@@ -21,6 +21,8 @@ main {
 
 nav {
 	height: 100px;
+	display:none;
+	position: fixed;
 }
 
 nav img {
