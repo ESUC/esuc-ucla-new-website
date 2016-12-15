@@ -3,6 +3,7 @@ html, body {
 	width: 100% ;
 	margin: 0px;
 	padding: 0px;
+	font-family: 'Martel Sans', sans-serif;
 }
 
 main {
@@ -16,5 +17,21 @@ main {
 	height: 25%; /* 100% / 4 sub-pages %/ */
 	width: 100%;
 	border: 1px solid black;
+}
+
+nav {
+	height: 100px;
+}
+
+nav img {
+	max-height: 100px;
+	padding: 15px;
+}
+
+nav ul a {
+	color: grey;
+}
+nav ul {
+	padding: 15px;
 }
 
