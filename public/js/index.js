@@ -16,6 +16,12 @@
 
  	var landing_height = $('#landing').outerHeight();
  	var nav_changed = false;
+ 	var preloaderFadeTimeout = 500;
+
+ 	$(window).load(function(){
+ 		var preloader = $('.preloader-wrapper');
+ 		preloader.fadeOut(preloaderFadeTimeout);
+ 	})
 
  	$(window).scroll(function() {
  		if (($(window).scrollTop() + $(window).height()) <= 1.8 * landing_height){
@@ -33,5 +39,4 @@
  			
  		}
  	});
-
  });
