@@ -60,6 +60,9 @@ nav ul {
 
 .bruin-bear{
 	max-width: 200px;
+	padding-bottom: 15px;
+	border-bottom: 5px solid;
+	border-bottom-color: rgba(255,255,255,255);
 }
 
 .landing-header-text{
@@ -132,17 +135,42 @@ a.landing-right-button:hover{
   	font-size: 36px;
   	letter-spacing: 1px;
   }
-
   .landing-buttons{
   	font-size: 12px;
+  }
+  .landing-left-button{
+  	margin-right: 5px;
+  }
+  a.landing-left-button:hover{
+	border-width: 1px 2px 1px 1px;
+  }
+  .landing-right-button{
+  	margin-left: 5px;
   }
 }
 
 /*Devices that are at most 768px, run these CSS*/
 @media screen and (max-width: 768px)
 {
+	.landing-contents{
+		padding-top: 5%;
+	}
 	.landing-header-text{
 		font-size: 28px;
+	}
+	.landing-left-button{
+		display: block;
+		margin-right: 0px;
+		margin-bottom: 5px;
+		margin-top: -20px;
+	}
+	a.landing-left-button:hover{
+		border-width: 2px 1px 2px 1px;
+	}
+	.landing-right-button{
+		display: block;
+		margin-left: 0px;
+		margin-top: 5px;
 	}
 }
 
