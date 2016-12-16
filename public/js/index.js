@@ -15,11 +15,9 @@
  	});
 
  	var landing_height = $('#landing').outerHeight();
- 	console.log(landing_height);
  	var nav_changed = false;
 
  	$(window).scroll(function() {
- 		console.log($(window).scrollTop() + $(window).height());
  		if (($(window).scrollTop() + $(window).height()) <= 1.8 * landing_height){
  			if (nav_changed == true){
  				console.log("height less");
