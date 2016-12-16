@@ -6,6 +6,10 @@ html, body {
 	font-family: 'Martel Sans', sans-serif;
 }
 
+a, a:active, a:focus{
+  outline: none;
+}
+
 main {
 	height: 400% ; /* 4 sub-pages x 100% */
 	width: 100% ;
@@ -16,7 +20,6 @@ main {
 .page {
 	height: 25%; /* 100% / 4 sub-pages %/ */
 	width: 100%;
-	border: 1px solid black;
 }
 
 nav {
@@ -34,4 +37,113 @@ nav ul a {
 nav ul {
 	padding: 15px;
 }
+
+#landing{
+	background-image: url(../img/ucla_engineering_building.jpg);
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+  	background-position: center;
+  	background-repeat: no-repeat;
+  	background-attachment: fixed;
+  	display: inline-block;
+  	padding: 5px;
+  	font-family: 'Roboto', sans-serif;
+  	text-transform: uppercase;
+  	text-align: center;
+}
+
+.landing-contents{
+	padding-top: 7%;
+}
+
+.bruin-bear{
+	max-width: 200px;
+}
+
+.landing-header-text{
+	font-size: 48px;
+	font-weight: 900;
+	color: rgba(255,255,255,255);
+	letter-spacing: 2px;
+}
+
+.landing-buttons{
+	display: table;
+	margin-top: 45px;
+	margin-bottom: 0; 
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 16px;
+	font-weight: 400;
+}
+
+.landing-left-button{
+	padding: 15px;
+	margin-right: 20px;
+	background-color: rgba(21,101,192,255);
+	border: rgba(21,101,192,255) solid;
+	border-width: 2px;
+	color: rgba(255,255,255,255);
+	text-shadow: none;
+	opacity: 1;
+	-webkit-transition: color, background-color 0.4s;
+	-moz-transition: color, background-color 0.4s;
+	transition: color, background-color 0.4s;
+}
+
+a.landing-left-button:hover{
+	background-color: rgba(255,255,255,0.1);
+	border: rgba(21,101,192,255) solid;
+	border-width: 1px;
+	font-weight: 800;
+	color: rgba(21,101,192,255);
+	text-shadow: 0.5px 0 0 rgba(255,255,255,0.5);
+	-webkit-transition: color, background-color 0.4s;
+	-moz-transition: color, background-color 0.4s;
+	transition: color, background-color 0.4s;
+}
+
+.landing-right-button{
+	padding: 15px;
+	margin-left: 20px;
+	background-color: transparent;
+	color: rgba(255,255,255,255);
+	border: rgba(255,255,255,255) solid;
+	-webkit-transition: color, border 0.4s;
+	-moz-transition: color, border 0.4s;
+	transition: color, border 0.4s;
+}
+
+a.landing-right-button:hover{
+	border: rgba(0,0,0,255) dotted;
+	border-width: 3px;
+	color: rgba(0,0,0,255);
+	-webkit-transition: color, border 0.4s;
+	-moz-transition: color, border 0.4s;
+	transition: color, border 0.4s;
+}
+
+/*Devices that are at most 992px, run these CSS*/
+@media screen and (max-width: 992px)
+{
+  .landing-header-text{
+  	font-size: 36px;
+  	letter-spacing: 1px;
+  }
+
+  .landing-buttons{
+  	font-size: 12px;
+  }
+}
+
+/*Devices that are at most 768px, run these CSS*/
+@media screen and (max-width: 768px)
+{
+	.landing-header-text{
+		font-size: 28px;
+	}
+}
+
 
