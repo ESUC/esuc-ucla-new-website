@@ -38,6 +38,7 @@ nav ul {
 	padding: 15px;
 }
 
+/*CSS for Landing section*/
 #landing{
 	background-image: url(../img/ucla_engineering_building.jpg);
 	-webkit-background-size: cover;
@@ -127,6 +128,8 @@ a.landing-right-button:hover{
 	-moz-transition: color, border 0.4s;
 	transition: color, border 0.4s;
 }
+/*End CSS for Landing Section*/
+
 
 /*Devices that are at most 992px, run these CSS*/
 @media screen and (max-width: 992px)
