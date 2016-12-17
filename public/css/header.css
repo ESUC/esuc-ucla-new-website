@@ -1,0 +1,91 @@
+nav {
+	line-height: 35px !important;
+	height: 100px;
+	position: fixed;
+	background-color: rgba(255,255,255,0.4);
+}
+li:hover {
+	background: none !important;
+}
+a:hover {
+	background: none !important;
+}
+
+nav .row {
+	margin-bottom: 0px !important;
+}
+
+.dropdown-content{
+	background-color: inherit;
+	box-shadow: none !important;
+}
+
+.dropdown-content a{
+	color: black !important;
+}
+
+.dropdown-content {
+	padding: 0px !important;
+}
+.nav-wrapper{
+    color: black;
+}
+
+@keyframes color_up {
+    from {
+        background-color: rgba(255,255,255,0.4);
+    }
+    to {
+        background-color: rgba(255,255,255,1.0);
+    }
+}
+
+#increaseOpacity{
+	animation-name: color_up;
+	animation-duration: 1s;
+	animation-direction: normal;
+	animation-timing-function: ease-in-out;
+	background-color: rgba(255, 255, 255, 1.0);
+}
+
+#increaseOpacity a{
+	color: gray;
+}
+
+#decreaseOpacity{
+	animation-name: color_up;
+	animation-duration: 1s;
+	animation-direction: reverse;
+	animation-timing-function: ease-in-out;
+	background-color: rgba(255, 255, 255, 0.4);
+}
+
+#decreaseOpacity a{
+	color: black;
+}
+
+
+nav img {
+	max-height: 100px;
+	padding: 15px;
+}
+
+nav ul a {
+	color: black;
+}
+nav ul {
+	padding: 30px;
+}
+
+#title {
+	/*font-family: 'Montserrat', sans-serif;*/
+	margin-top: 15px;
+	padding-left: 5px;
+	font-size: larger;
+	font-weight: bolder;
+}
+
+#sub-title {
+	/*font-family: 'Montserrat', sans-serif;*/
+	margin-left: 5px;
+}

@@ -1,15 +1,33 @@
 <header>
 	<nav>
-		<div class="nav-wrapper white">
-			<a href="#" class="brand-logo left"><img src="img/esuc-header@2x.png"></a>
-			<ul id="nav-mobile" class="right hide-on-med-and-down">
-				<li><a href="#about">ABOUT</a></li>
-				<li><a href="#blog">BLOG</a></li>
-				<li><a href="#Calendars">CALENDARS</a></li>
-				<li><a href="#Eweek">EWEEK</a></li>
-				<li><a href="#Officers">OFFICERS</a></li>
-				<li><a href="#Sponsors">SPONSORS</a></li>
-			</ul>
+		<div class="nav-wrapper">
+			<div class="row">
+				<div class="col s1">
+					<a href="/" class="brand-logo left"><img src="img/logo_blue_swish.png"></a>
+				</div>
+				<div class="col s4">
+					<div id="title" class="row">Engineering Society</div>
+					<div id="sub-title" class="row">University of California, Los Angeles</div>
+				</div>
+				<div class="col s6 right">	
+					<ul id="nav-mobile" class="right hide-on-med-and-down">
+						<li><a href="#about">ABOUT</a></li>
+						<li><a href="#blog">BLOG</a></li>
+						<li><a href="#" class='dropdown-button' data-beloworigin="true" data-constrainwidth="false" data-hover="true" data-activates='calendar_dropdown'>CALENDARS</a></li>
+
+						<ul id='calendar_dropdown' class='dropdown-content black-text'>
+							<li><a href="engineering_calendar">Engineering Calendar</a></li>
+							<li><a href="#!">ESUC Lounge Calendar</a></li>
+							<li class="divider"></li>
+							<li><a href="#!">Add your event!</a></li>
+						</ul>
+
+						<li><a href="#eweek">EWEEK</a></li>
+						<li><a href="#officers">OFFICERS</a></li>
+						<li><a href="#sponsors">SPONSORS</a></li>
+					</ul>
+				</div>			
+			</div>
 		</div>
 	</nav>
 </header>
