@@ -48,4 +48,12 @@ nav ul {
 
 #about h2 {
 	padding-top: 0px;
+	font-size:125%;
+}
+
+#about p {
+	padding-left:200px;
+	padding-right:40px;
+	width: 900px;
+	/* <word-wrap: break-word; */
 }
