@@ -35,3 +35,17 @@ nav ul {
 	padding: 15px;
 }
 
+#about {
+	text-align: center;
+}
+
+#about h1 {
+	padding-top: 60px;
+	font-size: 250%;
+	font-family: Arial black;
+	color: rgb(56, 70, 85);
+}
+
+#about h2 {
+	padding-top: 0px;
+}
