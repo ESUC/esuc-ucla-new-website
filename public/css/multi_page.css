@@ -29,6 +29,37 @@ main {
 	background-color: black;
 }
 
-#officers-header{
+/*CSS for sponsors*/
+#sponsors{
+	padding-left: 5%;
+	padding-right: 5%;
+	/*height: 15%;*/ 
+}
+
+.sponsor-img{
+	max-width: 250px;
+	margin: auto;
+	padding: 5px;
+}
+/*End CSS for sponsors*/
+
+/*CSS for officers*/
+#officers{
+	padding-left: 5%;
+	padding-right: 5%;
+}
+
+.officer-img{
+	max-width: 250px;
+	padding: 5px;
+}
+/*End CSS for officers*/
+
+/*Generic CSS*/
+.header-center{
 	text-align: center;
+}
+
+.glowable:hover{
+	box-shadow: 0px 0px 20px rgba(0,0,0,1);
 }
