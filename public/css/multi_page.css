@@ -26,5 +26,21 @@ main {
 }
 
 #about {
-	background-color: black;
+	text-align: center;
+}
+
+#about h1 {
+	padding-top: 60px;
+	font-size: 250%;
+	font-family: Arial black;
+	color: rgb(56, 70, 85);
+}
+
+#about h2 {
+	padding-top: 0px;
+	font-size:125%;
+}
+
+#about p {
+	<word-wrap: break-word;
 }
