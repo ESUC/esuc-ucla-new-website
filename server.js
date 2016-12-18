@@ -18,12 +18,12 @@ app.use('/', router);
 
 router.get('/', function(req, res){
 	console.log("Received Home Page Request");
-	res.render('index');
+	res.render('index', {nav_wrapper_id: 'decreaseOpacity'});
 });
 
 router.get('/engineering_calendar/', function(req, res){
 	console.log("Received Engineering Calendars Request");
-	res.render('engineering_calendar');
+	res.render('engineering_calendar', {nav_wrapper_id: 'increaseOpacity'});
 });
 
 router.get('/lounge_calendar/', function(req, res){
