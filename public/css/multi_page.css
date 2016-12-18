@@ -9,7 +9,7 @@ main {
 	height: 25%; /* 100% / 4 sub-pages %/ */
 	width: 100%;
 	border: 1px solid black;
-	padding: 100px;
+	padding-top: 100px;
 	padding-left: 80px;
 	padding-right: 80px;
 }
