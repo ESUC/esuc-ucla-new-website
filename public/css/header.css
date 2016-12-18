@@ -15,18 +15,19 @@ nav .row {
 	margin-bottom: 0px !important;
 }
 
-.dropdown-content{
+#decreaseOpacity .dropdown-content{
 	background-color: inherit;
 	box-shadow: none !important;
 }
 
-.dropdown-content a{
+ #decreaseOpacity .dropdown-content a{
 	color: black !important;
 }
 
 .dropdown-content {
 	padding: 0px !important;
 }
+
 .nav-wrapper{
     color: black;
 }
@@ -78,7 +79,6 @@ nav ul {
 }
 
 #title {
-	/*font-family: 'Montserrat', sans-serif;*/
 	margin-top: 15px;
 	padding-left: 5px;
 	font-size: larger;
@@ -86,6 +86,5 @@ nav ul {
 }
 
 #sub-title {
-	/*font-family: 'Montserrat', sans-serif;*/
 	margin-left: 5px;
 }
