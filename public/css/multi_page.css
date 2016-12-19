@@ -9,7 +9,7 @@ main {
 	height: 25%; /* 100% / 4 sub-pages %/ */
 	width: 100%;
 	border: 1px solid black;
-	padding-top: 100px;
+	padding-top: 50px;
 	padding-left: 80px;
 	padding-right: 80px;
 }
@@ -43,6 +43,13 @@ main {
 	max-width: 250px;
 	margin: auto;
 	padding: 5px;
+	box-shadow: 0px 0px 10px rgba(180,180,180,1);
+	transition: box-shadow 0.5s;
+}
+
+.sponsor-img:hover{
+	box-shadow: 0px 0px 20px rgba(0,0,0,1);
+	transition: box-shadow 0.5s;
 }
 /*End CSS for sponsors*/
 
@@ -54,15 +61,13 @@ main {
 
 .officer-img{
 	max-width: 250px;
+	margin: auto;
 	padding: 5px;
+	box-shadow: 0px 0px 5px rgba(0,149,255,1);
 }
 /*End CSS for officers*/
 
 /*Generic CSS*/
 .header-center{
 	text-align: center;
-}
-
-.glowable:hover{
-	box-shadow: 0px 0px 20px rgba(0,0,0,1);
 }
