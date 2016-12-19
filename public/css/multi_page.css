@@ -32,7 +32,8 @@ main {
 #about h1 {
 	padding-top: 60px;
 	font-size: 250%;
-	font-family: Arial black;
+	font-family: "Open Sans";
+	font-weight: 900;
 	color: rgb(56, 70, 85);
 }
 
@@ -42,5 +43,5 @@ main {
 }
 
 #about p {
-	<word-wrap: break-word;
+	word-wrap: break-word;
 }
