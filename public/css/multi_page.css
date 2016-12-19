@@ -29,9 +29,29 @@ main {
 }
 
 #about {
+<<<<<<< HEAD
 	background-color: black;
 }
 
 #officers-header{
 	text-align: center;
+=======
+	text-align: center;
+}
+
+#about h1 {
+	padding-top: 60px;
+	font-size: 250%;
+	font-family: Arial black;
+	color: rgb(56, 70, 85);
+}
+
+#about h2 {
+	padding-top: 0px;
+	font-size:125%;
+}
+
+#about p {
+	<word-wrap: break-word;
+>>>>>>> d62be3d5462e6377e453c64817d5073137553b5c
 }

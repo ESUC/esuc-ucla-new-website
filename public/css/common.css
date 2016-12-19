@@ -6,3 +6,41 @@ html, body {
 	font-family: 'Martel Sans', sans-serif;
 }
 
+.input-field label {
+     color: gray;
+   }
+
+   .input-field input[type=text]:focus + label {
+     color: #225a9d;
+     font-weight: bolder;
+     font-size: larger;
+   }
+
+   .input-field input[type=text]:focus {
+     border-bottom: 1px solid #225a9d;
+     box-shadow: 0 1px 0 0 #225a9d;
+   }
+
+
+   .picker__weekday-display{
+   		background-color: #225a9d;
+   }
+
+   .picker__date-display{
+   		background-color: #225a9d;
+   }
+
+
+   .picker__day--selected, .picker__day--selected:hover, .picker--focused .picker__day--selected{
+   		background-color: #225a9d;
+   }
+
+
+   .picker__day.picker__day--today{
+   		    color: #225a9d;
+   }
+
+   .picker__close, .picker__today{
+   		color: #225a9d;
+   }
+

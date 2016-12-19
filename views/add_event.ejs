@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<head>
+	<title>Display Bord Form</title>
+	<% include partials/dependencies %>
+	<link rel="stylesheet" href="css/single_page.css" type='text/css'>
+</head>
+<body>
+	<% include partials/header %>
+	<main>
+	<center><h4>Add your event to the Engineering Display board!</h4></center>
+		<div class="row">
+			<form class="col l8 s12">
+				<div class="row">
+					<div class="input-field col s6">
+          				<input placeholder="General Meeting" id="event_name" type="text" class="validate">
+          				<label for="event_name">Event Name</label>
+       				</div>
+				</div>
+
+				<div class="row">
+					<div class="input-field col s6">
+          				<input placeholder="Boelter 5800" id="location" type="text" class="validate">
+          				<label for="location">Location</label>
+        			</div>
+        		</div>
+
+        		<div class="row">
+        		<div class="col s6">
+        			<label for="data">Date</label>
+        			<input type="date" id="date" class="datepicker ">
+        		</div>
+        			
+        		</div>
+			</form>
+		</div>
+	</main>
+	<% include partials/footer %>
+
+</body>

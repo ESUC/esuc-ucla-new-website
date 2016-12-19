@@ -28,8 +28,14 @@ router.get('/engineering_calendar/', function(req, res){
 
 router.get('/lounge_calendar/', function(req, res){
 	console.log("Received Lounge Calendars Request");
-	res.render('lounge_calendar');
+	res.render('lounge_calendar', {nav_wrapper_id: 'increaseOpacity'});
 });
+
+router.get('/add_event/', function(req, res){
+	console.log("Received Add Events Request");
+	res.render('add_event', {nav_wrapper_id: 'increaseOpacity'});
+});
+
 
 http.listen(port, function(){
 	console.log("listening on port: " + port);
