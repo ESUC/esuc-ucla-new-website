@@ -1,5 +1,5 @@
 main {
-	height: 400% ; /* 4 sub-pages x 100% */
+	height: 425% ; /* 4 sub-pages x 100% */
 	width: 100% ;
 	margin: 0px;
 	padding: 0px;
@@ -7,6 +7,12 @@ main {
 
 .page {
 	height: 25%; /* 100% / 4 sub-pages %/ */
+	width: 100%;
+	border: 1px solid black;
+}
+
+.about-page {
+	height: 50%;
 	width: 100%;
 	border: 1px solid black;
 }
