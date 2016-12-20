@@ -8,8 +8,8 @@ main {
 .page {
 	height: 25%; /* 100% / 4 sub-pages %/ */
 	width: 100%;
-	border: 1px solid black;
-	padding-top: 50px;
+	/*border: 1px solid black;*/
+	padding-top: 100px;
 	padding-left: 80px;
 	padding-right: 80px;
 }
@@ -40,10 +40,10 @@ main {
 }
 
 .sponsor-img{
-	max-width: 250px;
+	max-width: 200px;
 	margin: auto;
-	padding: 5px;
 	box-shadow: 0px 0px 10px rgba(180,180,180,1);
+	background-color: rgba(255,255,255,1);
 	transition: box-shadow 0.5s;
 }
 
@@ -55,19 +55,48 @@ main {
 
 /*CSS for officers*/
 #officers{
-	padding-left: 5%;
-	padding-right: 5%;
+	padding-left: 10%;
+	padding-right: 10%;
 }
 
 .officer-img{
 	max-width: 250px;
 	margin: auto;
-	padding: 5px;
-	box-shadow: 0px 0px 5px rgba(0,149,255,1);
+	padding: 25px;
+	border-radius: 50%;
+}
+
+.officer-name{
+	text-align: center;
+	font-weight: 450;
+	font-style: italic;
+	font-size: 20px;
+	margin-top: -3px;
+	margin-bottom: -3px;
+}
+
+.officer-position{
+	text-align: center;
+	font-weight: 200;
+	font-style: italic;
+	font-size: 16px;
+	margin-top: -3px;
 }
 /*End CSS for officers*/
 
 /*Generic CSS*/
 .header-center{
 	text-align: center;
+}
+
+.contents-center{
+	margin: auto;
+	width: 90%;
+	height: 90%;
+	box-shadow: 0px 0px 10px rgba(180,180,180,1);
+}
+
+.separate{
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
