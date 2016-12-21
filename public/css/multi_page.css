@@ -62,8 +62,15 @@ main {
 .officer-img{
 	max-width: 250px;
 	margin: auto;
-	padding: 25px;
+	padding: 50px;
+	background-image: url(../img/hexagon-gray.png);
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
 	border-radius: 50%;
+	overflow: hidden;
 }
 
 .officer-name{
