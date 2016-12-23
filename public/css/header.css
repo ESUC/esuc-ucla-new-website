@@ -53,6 +53,11 @@ nav .row {
 	color: gray;
 }
 
+#title_wrapper{
+	position: absolute;
+	left:120px;
+}
+
 #decreaseOpacity{
 	animation-name: color_up;
 	animation-duration: 1s;
@@ -64,11 +69,15 @@ nav .row {
 #decreaseOpacity a{
 	color: black;
 }
+nav #title_col {
+	margin: 5px;
+}
 
 
 nav img {
 	max-height: 100px;
-	padding: 15px;
+	margin: 5px;
+	padding: 10px;
 }
 
 nav ul a {

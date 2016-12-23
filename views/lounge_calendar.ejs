@@ -2,10 +2,20 @@
 <head>
 	<title>ESUC Lounge Calendar</title>
 	<% include partials/dependencies %>
+	<link rel="stylesheet" href="css/single_page.css" type='text/css'>
 </head>
 <body>
 	<% include partials/header %>
 	<main>
+		<div id="engineering-calendar">
+			<h2 class="center">ESUC LOUNGE CALENDAR</h2>
+			<p>Now that our newly renovated lounge has opened in Winter 2012, you can come sit in during the events hosted by the various engineering groups we have on campus! Engineering groups may book the lounge via adding their events to the calendar below.</p>
+			<% include partials/preloader %>
+			<div class="section col-md-12">
+				<iframe src="https://calendar.google.com/calendar/embed?src=1lgmciosqf4vmr6gj8v3gvl0qs%40group.calendar.google.com&ctz=America/Los_Angeles" style="border: 0" width="100%" height="600" frameborder="0" scrolling="no"></iframe>		
+			</div>
+		</div>
 	</main>
 	<% include partials/footer %>
+
 </body>
