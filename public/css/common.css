@@ -5,20 +5,22 @@ html, body {
 	padding: 0px;
 	font-family: 'Martel Sans', sans-serif;
 }
-
-.input-field label {
-     color: gray;
+form .btn{
+  background-color: #225a9d !important;
+}
+form label {
+     color: gray !important;
    }
 
-   .input-field input[type=text]:focus + label {
-     color: #225a9d;
-     font-weight: bolder;
-     font-size: larger;
+   form input:focus + label {
+     color: #225a9d !important;
+     font-weight: bolder !important;
+     font-size: larger !important;
    }
 
-   .input-field input[type=text]:focus {
-     border-bottom: 1px solid #225a9d;
-     box-shadow: 0 1px 0 0 #225a9d;
+   form input:focus {
+     border-bottom: 1px solid #225a9d !important;
+     box-shadow: 0 1px 0 0 #225a9d !important;
    }
 
 

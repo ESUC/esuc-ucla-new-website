@@ -15,12 +15,12 @@ nav .row {
 	margin-bottom: 0px !important;
 }
 
-#decreaseOpacity .dropdown-content{
-	background-color: inherit;
+.transparent .dropdown-content{
+	background-color: background-color: rgba(255,255,255,0.4);;
 	box-shadow: none !important;
 }
 
- #decreaseOpacity .dropdown-content a{
+.transparent .dropdown-content a{
 	color: black !important;
 }
 
@@ -57,7 +57,11 @@ nav .row {
 	position: absolute;
 	left:120px;
 }
+.transparent {
+	background-color: rgba(255, 255, 255, 0.4) !important;
+}
 
+,
 #decreaseOpacity{
 	animation-name: color_up;
 	animation-duration: 1s;
@@ -81,7 +85,7 @@ nav img {
 }
 
 nav ul a {
-	color: black;
+	color: black !important;
 }
 nav ul {
 	padding: 30px;

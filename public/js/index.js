@@ -1,3 +1,5 @@
+ 
+
  $(document).ready(function(){
  	$(function() {
  		$('a[href*="#"]:not([href="#"])').click(function() {
@@ -15,7 +17,7 @@
  	});
 
  	var landing_height = $('#landing').outerHeight();
- 	var nav_changed = false;
+ 	var nav_changed = true;
  	var preloaderFadeTimeout = 500;
 
  	$(window).load(function(){
@@ -27,13 +29,21 @@
  		if (($(window).scrollTop() + $(window).height()) <= 1.8 * landing_height){
  			if (nav_changed == true){
  				console.log("height less");
- 				$('.nav-wrapper').prop('id', 'decreaseOpacity');
+ 				$('nav').removeClass('white');
+ 				$('nav').addClass('transparent');
+
+ 				$('#calendar_dropdown').removeClass('white');
+ 				$('#calendar_dropdown').addClass('transparent');
  				nav_changed = false;
  			}
  		} 
  		else {
  			if (nav_changed == false){
- 				$('.nav-wrapper').prop('id', 'increaseOpacity');
+ 				$('nav').addClass('white');
+ 				$('nav').removeClass('transparent');
+
+ 				$('#calendar_dropdown').addClass('white');
+ 				$('#calendar_dropdown').removeClass('transparent');
  				nav_changed = true;
  			}
  			
@@ -44,4 +54,5 @@
     	selectMonths: true, // Creates a dropdown to control month
     	selectYears: 15 // Creates a dropdown of 15 years to control year
   	});
+
  });
