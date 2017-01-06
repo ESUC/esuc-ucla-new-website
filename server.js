@@ -5,7 +5,8 @@ var router = express.Router();
 var path = require('path');
 var port = process.env.PORT || 8080;
 var bodyParser = require('body-parser');
-var sendgrid  = require('sendgrid')('esuc-ucla2016', 'esuc2016');
+var sg = require('sendgrid')(process.env.SENDGRID_APIKEY);
+var helper = require('sendgrid').mail;
 const formidable = require('formidable');
 const util = require('util');
 var firebase = require("firebase");
@@ -78,14 +79,18 @@ router.post('/upload_event', function(req, res){
 		if (file.size == 0){
 			console.log("no flier");
 			fields['flierAdded'] = false;
-			addEventToFirebase(fields);
+			addEventToFirebase(fields, function(data){
+				sendEmail(data);
+			});
 		}
 		else {
 			fields['flierAdded'] = true;
 			cloudinary.uploader.upload(file.path, function(result){
 				fields['cloudinaryName'] = result.public_id;
 				fields['cloudinaryURL'] = result.url;
-				addEventToFirebase(fields);
+				addEventToFirebase(fields, function(data){
+					sendEmail(data);
+				});
 			}, {
 				width: 700,
 				height: 700,
@@ -107,7 +112,7 @@ http.listen(port, function(){
 
 
 
-function addEventToFirebase(eventFields){
+function addEventToFirebase(eventFields, cb){
 	if (eventFields.flierAdded == false){
 		console.log("Pushing data to firebase");
 		var firebaseObject = eventsDatabase.push({
@@ -121,8 +126,9 @@ function addEventToFirebase(eventFields){
 			moderated: false,
 			flierAdded: false
 		})
-		var urlLink = urllink = firebaseObject.toString();
-		console.log(urllink);
+		var urlLink  = firebaseObject.toString();
+		console.log(urlLink);
+		cb(urlLink);
 	} 
 	else {
 		console.log("Pushing data to firebase");
@@ -139,8 +145,35 @@ function addEventToFirebase(eventFields){
 			cloudinaryName: eventFields.cloudinaryName,
 			cloudinaryURL: eventFields.cloudinaryURL
 		})
-		var urlLink = urllink = firebaseObject.toString();
-		console.log(urllink);
+		var urlLink = firebaseObject.toString();
+		console.log(urlLink);
+		cb(urlLink);
 	}
+}
+
+function sendEmail(firebaseURL){
+	var from_email = new helper.Email('website@esuc.ucla.com');
+ 	var to_email = new helper.Email('esuc.ucla.webmaster@gmail.com');
+ 	var content = new helper.Content('text/plain', 'New event added at ' + firebaseURL);
+ 	var subject = 'New Event Added for Display Board';
+ 	var mail = new helper.Mail(from_email, subject, to_email, content);
+
+ 	var request = sg.emptyRequest({
+ 		method: 'POST',
+ 		path: '/v3/mail/send',
+ 		body: mail.toJSON(),
+ 	});
+ 	sg.API(request, function(error, response) {
+ 		console.log(response.statusCode);
+ 		console.log(response.body);
+ 		console.log(response.headers);
+ 		if (!error){
+ 			console.log("Email sent");
+ 		}
+ 		else {
+ 			console.log(error);
+ 		}
+ 	});
+
 }
 
