@@ -19,6 +19,7 @@
   "homepage": "https://github.com/ESUC/esuc-ucla-new-website#readme",
   "dependencies": {
     "body-parser": "^1.15.2",
+    "cloudinary": "^1.5.0",
     "ejs": "^2.5.5",
     "express": "^4.14.0",
     "firebase": "^3.6.4",

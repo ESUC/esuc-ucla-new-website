@@ -8,6 +8,27 @@ var bodyParser = require('body-parser');
 var sendgrid  = require('sendgrid')('esuc-ucla2016', 'esuc2016');
 const formidable = require('formidable');
 const util = require('util');
+var firebase = require("firebase");
+
+var cloudinary = require('cloudinary');
+
+cloudinary.config({ 
+	cloud_name: process.env.CLOUDINARY_CLOUDNAME, 		 
+	api_key: process.env.CLOUDINARY_APIKEY, 		
+	api_secret: process.env.CLOUDINARY_APISECRET		
+});
+
+var config = {
+	apiKey: process.env.FIREBASE_APIKEY,
+	authDomain: process.env.FIREBASE_AUTHDOMAIN,
+	databaseURL: process.env.FIREBASE_DATABASEURL,
+	storageBucket: process.env.FIREBASE_STORAGEBUCKET,
+	messagingSenderId: process.env.FIREBASE_MESSAGINGSENDERID
+};
+
+firebase.initializeApp(config);
+
+var eventsDatabase = firebase.database().ref().child('events');
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -40,15 +61,86 @@ router.get('/add_event/', function(req, res){
 
 router.post('/upload_event', function(req, res){
 	var form = new formidable.IncomingForm();
+	var fields, file;
+	console.log("Got form")
+	form.parse(req, function(err, _fields, _file) {
+		console.log("Parsed form");
+		fields = _fields;
+		file = _file.flier;
+		fields.dateInMS = Date.parse(_fields.date);
+		res.render('add_event', {header_background: 'white'});
+		res.end();
+	});
 
-    form.parse(req, function(err, fields, files) {
-      res.writeHead(200, {'content-type': 'text/plain'});
-      res.write('received upload:\n\n');
-      res.end(util.inspect({fields: fields, files: files}));
-    });
+	form.on('end', function(){
+		//console.log(file);
+		console.log("form end");
+		if (file.size == 0){
+			console.log("no flier");
+			fields['flierAdded'] = false;
+			addEventToFirebase(fields);
+		}
+		else {
+			fields['flierAdded'] = true;
+			cloudinary.uploader.upload(file.path, function(result){
+				fields['cloudinaryName'] = result.public_id;
+				fields['cloudinaryURL'] = result.url;
+				addEventToFirebase(fields);
+			}, {
+				width: 700,
+				height: 700,
+				crop: 'fit',
+				format: 'png'
+			});
+		}
+	})
 })
 
 
 http.listen(port, function(){
 	console.log("listening on port: " + port);
 });
+
+
+
+
+
+
+
+function addEventToFirebase(eventFields){
+	if (eventFields.flierAdded == false){
+		console.log("Pushing data to firebase");
+		var firebaseObject = eventsDatabase.push({
+			eventName: eventFields.event_name,
+			eventDate: eventFields.date,
+			eventTime: eventFields.time,
+			eventTimeMs: eventFields.dateInMS,
+			organizationName: eventFields.org,
+			location: eventFields.location,
+			organizationEmail: eventFields.email,
+			moderated: false,
+			flierAdded: false
+		})
+		var urlLink = urllink = firebaseObject.toString();
+		console.log(urllink);
+	} 
+	else {
+		console.log("Pushing data to firebase");
+		var firebaseObject = eventsDatabase.push({
+			eventName: eventFields.event_name,
+			eventDate: eventFields.date,
+			eventTime: eventFields.time,
+			eventTimeMs: eventFields.dateInMS,
+			organizationName: eventFields.org,
+			location: eventFields.location,
+			organizationEmail: eventFields.email,
+			moderated: false,
+			flierAdded: true,
+			cloudinaryName: eventFields.cloudinaryName,
+			cloudinaryURL: eventFields.cloudinaryURL
+		})
+		var urlLink = urllink = firebaseObject.toString();
+		console.log(urllink);
+	}
+}
+
