@@ -20,22 +20,22 @@ app.use('/', router);
 
 router.get('/', function(req, res){
 	console.log("Received Home Page Request");
-	res.render('index', {nav_wrapper_id: 'decreaseOpacity'});
+	res.render('index', {header_background: 'transparent'});
 });
 
 router.get('/engineering_calendar/', function(req, res){
 	console.log("Received Engineering Calendars Request");
-	res.render('engineering_calendar', {nav_wrapper_id: 'increaseOpacity'});
+	res.render('engineering_calendar', {header_background: 'white'});
 });
 
 router.get('/lounge_calendar/', function(req, res){
 	console.log("Received Lounge Calendars Request");
-	res.render('lounge_calendar', {nav_wrapper_id: 'increaseOpacity'});
+	res.render('lounge_calendar', {header_background: 'white'});
 });
 
 router.get('/add_event/', function(req, res){
 	console.log("Received Add Events Request");
-	res.render('add_event', {nav_wrapper_id: 'increaseOpacity'});
+	res.render('add_event', {header_background: 'white'});
 });
 
 router.post('/upload_event', function(req, res){
