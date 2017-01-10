@@ -8,7 +8,7 @@ main {
 .page {
 	height: 25%; /* 100% / 4 sub-pages %/ */
 	width: 100%;
-	border: 1px solid black;
+	/*border: 1px solid black;*/
 	padding-top: 100px;
 	padding-left: 80px;
 	padding-right: 80px;
@@ -28,14 +28,49 @@ main {
 	font-size: 1.3em;
 }
 
-#about {
-<<<<<<< HEAD
-	background-color: black;
+
+/*CSS for sponsors*/
+#sponsors{
+	padding-left: 5%;
+	padding-right: 5%;
+	/*height: 15%;*/ 
 }
 
-#officers-header{
-	text-align: center;
-=======
+.sponsor-img{
+	max-width: 200px;
+	margin: auto;
+	background-color: rgba(255,255,255,1);
+	transition: box-shadow 0.5s;
+}
+
+.sponsor-img:hover{
+	box-shadow: 0px 0px 20px rgba(0,0,0,1);
+	transition: box-shadow 0.5s;
+}
+/*End CSS for sponsors*/
+
+/*CSS for officers*/
+#officers{
+	padding-left: 10%;
+	padding-right: 10%;
+}
+
+.officer-img{
+	max-width: 250px;
+	margin: auto;
+	padding: 50px;
+	background-image: url(../img/hexagon-gray.png);
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+	border-radius: 50%;
+	overflow: hidden;
+	border: none;
+}
+
+.officer-name{
 	text-align: center;
 }
 
@@ -52,6 +87,36 @@ main {
 }
 
 #about p {
-	<word-wrap: break-word;
->>>>>>> d62be3d5462e6377e453c64817d5073137553b5c
+	word-wrap: break-word;
+
+	font-weight: 450;
+	font-style: italic;
+	font-size: 20px;
+	margin-top: -3px;
+	margin-bottom: -3px;
+}
+
+.officer-position{
+	text-align: center;
+	font-weight: 200;
+	font-style: italic;
+	font-size: 16px;
+	margin-top: -3px;
+}
+/*End CSS for officers*/
+
+/*Generic CSS*/
+.header-center{
+	text-align: center;
+}
+
+.contents-center{
+	margin: auto;
+	width: 90%;
+	height: 90%;
+}
+
+.separate{
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
