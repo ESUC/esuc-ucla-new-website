@@ -16,7 +16,7 @@
  		});
  	});
 
- 	var landing_height = $('#landing').outerHeight();
+ 	
  	var nav_changed = true;
  	var preloaderFadeTimeout = 500;
 
@@ -26,6 +26,7 @@
  	})
 
  	$(window).scroll(function() {
+ 		var landing_height = $('#landing').outerHeight();
  		if (($(window).scrollTop() + $(window).height()) <= 1.7 * landing_height){
  			if (nav_changed == true){
  				console.log("height less");
