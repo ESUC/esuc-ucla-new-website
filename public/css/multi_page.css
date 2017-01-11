@@ -1,17 +1,25 @@
-main {
-	height: 400% ; /* 4 sub-pages x 100% */
+main {; /* 4 sub-pages x 100% */
 	width: 100% ;
 	margin: 0px;
 	padding: 0px;
 }
 
 .page {
-	height: 25%; /* 100% / 4 sub-pages %/ */
+	
 	width: 100%;
 	/*border: 1px solid black;*/
 	padding-top: 100px;
 	padding-left: 80px;
 	padding-right: 80px;
+	padding-bottom: 100px;
+	border-top: 1px solid black;
+}
+
+.about-page {
+	height: 50%;
+	width: 100%;
+	padding-top: 100px;
+	border: 1px solid black;
 }
 
 #landing {
@@ -19,6 +27,7 @@ main {
 	background-image: url('/img/engineering-building.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
+	min-height: 900px;
 }
 
 #landing-menu ul li {
@@ -27,7 +36,6 @@ main {
 	padding: 15px;
 	font-size: 1.3em;
 }
-
 
 /*CSS for sponsors*/
 #sponsors{
@@ -72,12 +80,21 @@ main {
 
 .officer-name{
 	text-align: center;
+	font-weight: 450;
+	font-style: italic;
+	font-size: 20px;
+	margin-top: -3px;
+	margin-bottom: -3px;
+}
+
+#about {
+	text-align: center;
 }
 
 #about h1 {
 	padding-top: 60px;
 	font-size: 250%;
-	font-family: Arial black;
+	font-weight: 900;
 	color: rgb(56, 70, 85);
 }
 
@@ -88,12 +105,6 @@ main {
 
 #about p {
 	word-wrap: break-word;
-
-	font-weight: 450;
-	font-style: italic;
-	font-size: 20px;
-	margin-top: -3px;
-	margin-bottom: -3px;
 }
 
 .officer-position{
@@ -109,6 +120,9 @@ main {
 .header-center{
 	text-align: center;
 }
+h3 {
+	color: #225a9d;
+}
 
 .contents-center{
 	margin: auto;
@@ -119,4 +133,5 @@ main {
 .separate{
 	padding-top: 10px;
 	padding-bottom: 10px;
+
 }
