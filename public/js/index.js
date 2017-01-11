@@ -55,4 +55,8 @@
     	selectYears: 15 // Creates a dropdown of 15 years to control year
   	});
 
+  	 $(document).ready(function(){
+      $('.slider').slider();
+    });
+
  });

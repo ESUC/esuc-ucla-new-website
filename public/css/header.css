@@ -3,6 +3,7 @@ nav {
 	height: 100px;
 	position: fixed;
 	background-color: rgba(255,255,255,0.4);
+	z-index: 2;
 }
 li:hover {
 	background: none !important;
@@ -21,36 +22,11 @@ nav .row {
 }
 
 .transparent .dropdown-content a{
-	color: black !important;
+	color: white !important;
 }
 
 .dropdown-content {
 	padding: 0px !important;
-}
-
-.nav-wrapper{
-    color: black;
-}
-
-@keyframes color_up {
-    from {
-        background-color: rgba(255,255,255,0.4);
-    }
-    to {
-        background-color: rgba(255,255,255,1.0);
-    }
-}
-
-#increaseOpacity{
-	animation-name: color_up;
-	animation-duration: 1s;
-	animation-direction: normal;
-	animation-timing-function: ease-in-out;
-	background-color: rgba(255, 255, 255, 1.0);
-}
-
-#increaseOpacity a{
-	color: gray;
 }
 
 #title_wrapper{
@@ -58,21 +34,9 @@ nav .row {
 	left:120px;
 }
 .transparent {
-	background-color: rgba(255, 255, 255, 0.4) !important;
+	background-color: rgba(34, 90, 157, 0.8) !important;
 }
 
-,
-#decreaseOpacity{
-	animation-name: color_up;
-	animation-duration: 1s;
-	animation-direction: reverse;
-	animation-timing-function: ease-in-out;
-	background-color: rgba(255, 255, 255, 0.4);
-}
-
-#decreaseOpacity a{
-	color: black;
-}
 nav #title_col {
 	margin: 5px;
 }
@@ -84,13 +48,6 @@ nav img {
 	padding: 10px;
 }
 
-.transparent ul a {
-	color: black !important;
-}
-
-nav ul a {
-	color: #225a9d !important;
-}
 nav ul {
 	padding: 30px;
 }

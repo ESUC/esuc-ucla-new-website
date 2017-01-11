@@ -120,9 +120,7 @@ main {; /* 4 sub-pages x 100% */
 .header-center{
 	text-align: center;
 }
-h3 {
-	color: #225a9d;
-}
+
 
 .contents-center{
 	margin: auto;
@@ -133,5 +131,9 @@ h3 {
 .separate{
 	padding-top: 10px;
 	padding-bottom: 10px;
+}
 
+
+.slider img{
+	filter: blur(5px);
 }

@@ -46,8 +46,21 @@ form label {
    		color: #225a9d;
    }
 
+   .slider {
+    z-index: 1;
+   }
+
 
    footer {
     background-color: blue;
    }
+
+
+h2, h3 {
+  color: #225a9d;
+}
+
+.slider .indicators .indicator-item.active{
+  background-color: #225a9d;
+}
 

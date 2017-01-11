@@ -7,9 +7,19 @@
 <body>
 	<% include partials/header %>
 	<main>
-		<center><h4>Add your event to the Engineering Display board!</h4></center>
+		<center><h4>Add Event to Engineering Display Board</h4>
+		<p>Complete the form below to add your organization's event to the Engineering Display Board present on the 5th floor of Boelter.</p></center>
+		
 		<div class="row">
-			<form class="col l8 s12" action="/upload_event" enctype="multipart/form-data" method="post">
+		<div class="col l5 s12">
+			General guidelines for uploading events:
+			<ol>
+				<li>Fliers can be submitted in PNG, PDF, JPG or JPEG format</li>
+				<li>Flyers are best rendered in an aspect ratio of 4:3</li>
+				<li>All events submitted are subject to moderation  </li>
+			</ol>
+		</div>
+			<form class="col l7 s12" action="/upload_event" enctype="multipart/form-data" method="post">
 				<div class="row">
 					<div class="input-field col s6">
 						<input placeholder="General Meeting" id="event_name" name="event_name" type="text" class="validate">
