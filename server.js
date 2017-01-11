@@ -47,17 +47,17 @@ router.get('/', function(req, res){
 
 router.get('/engineering_calendar/', function(req, res){
 	console.log("Received Engineering Calendars Request");
-	res.render('engineering_calendar', {header_background: 'transparent'});
+	res.render('engineering_calendar');
 });
 
 router.get('/lounge_calendar/', function(req, res){
 	console.log("Received Lounge Calendars Request");
-	res.render('lounge_calendar', {header_background: 'transparent'});
+	res.render('lounge_calendar');
 });
 
 router.get('/add_event/', function(req, res){
 	console.log("Received Add Events Request");
-	res.render('add_event', {header_background: 'transparent'});
+	res.render('add_event');
 });
 
 router.post('/upload_event', function(req, res){
@@ -69,7 +69,7 @@ router.post('/upload_event', function(req, res){
 		fields = _fields;
 		file = _file.flier;
 		fields.dateInMS = Date.parse(_fields.date);
-		res.render('add_event', {header_background: 'white'});
+		res.render('add_event');
 		res.end();
 	});
 

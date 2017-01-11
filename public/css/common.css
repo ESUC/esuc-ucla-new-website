@@ -64,3 +64,43 @@ h2, h3 {
   background-color: #225a9d;
 }
 
+
+/*CSS for footer*/
+#footer{
+  padding-top: 25px;
+  padding-bottom: 5px;
+  background-color: rgba(34,90,157,0.7);
+}
+
+.footer-logo{
+  max-width: 200px;
+  -webkit-animation:unspin 0.5s;
+    -moz-animation:unspin 0.5s;
+    animation:unspin 0.5s;
+}
+
+.footer-logo:hover{
+  -webkit-animation:spin 0.5s;
+    -moz-animation:spin 0.5s;
+    animation:spin 0.5s;
+}
+
+.footer-title{
+  color: rgba(255,255,255,1);
+}
+
+.footer-title-text{
+  color: rgba(255,255,255,1);
+  margin-top: -5px;
+}
+
+.footer-section-title{
+  text-align: center;
+}
+
+.sub-list{
+  padding-left: 25px;
+}
+
+/*End CSS for footer*/
+
