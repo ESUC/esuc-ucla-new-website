@@ -26,7 +26,7 @@
  	})
 
  	$(window).scroll(function() {
- 		if (($(window).scrollTop() + $(window).height()) <= 1.8 * landing_height){
+ 		if (($(window).scrollTop() + $(window).height()) <= 1.7 * landing_height){
  			if (nav_changed == true){
  				console.log("height less");
  				$('nav').removeClass('white');
