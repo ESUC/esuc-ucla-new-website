@@ -95,6 +95,15 @@ main {
 
 .footer-logo{
 	max-width: 200px;
+	-webkit-animation:unspin 0.5s;
+  	-moz-animation:unspin 0.5s;
+  	animation:unspin 0.5s;
+}
+
+.footer-logo:hover{
+	-webkit-animation:spin 0.5s;
+  	-moz-animation:spin 0.5s;
+  	animation:spin 0.5s;
 }
 
 .footer-title{
@@ -131,6 +140,14 @@ main {
 	padding-top: 10px;
 	padding-bottom: 10px;
 }
+
+@-moz-keyframes unspin { 100% { -moz-transform: rotate(-360deg); } }
+@-webkit-keyframes unspin { 100% { -webkit-transform: rotate(-360deg); } }
+@keyframes unspin { 100% { -webkit-transform: rotate(-360deg); transform:rotate(-360deg); } }
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
 
 @media screen and (max-width: 992px)
 {
