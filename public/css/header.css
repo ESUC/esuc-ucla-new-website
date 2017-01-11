@@ -21,6 +21,9 @@ nav .row {
 	margin-bottom: 0px !important;
 }
 
+i {
+	padding: 15px;
+}
 
 nav .dropdown-content a{
 	color: white !important;
@@ -48,6 +51,10 @@ nav img {
 
 nav ul {
 	padding: 30px;
+}
+
+#mobile-demo ul {
+	padding: 0px 0px 0px 15px!important;
 }
 
 #title {
