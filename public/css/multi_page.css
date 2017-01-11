@@ -1,12 +1,10 @@
 main {
-	height: 400% ; /* 4 sub-pages x 100% */
 	width: 100% ;
 	margin: 0px;
 	padding: 0px;
 }
 
 .page {
-	height: 25%; /* 100% / 4 sub-pages %/ */
 	width: 100%;
 	/*border: 1px solid black;*/
 	padding-top: 100px;
@@ -19,6 +17,7 @@ main {
 	background-image: url('/img/engineering-building.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
+	min-height: 900px;
 }
 
 #landing-menu ul li {
@@ -26,10 +25,6 @@ main {
 	width: 10%;
 	padding: 15px;
 	font-size: 1.3em;
-}
-
-#about {
-	background-color: black;
 }
 
 /*CSS for sponsors*/
@@ -91,6 +86,36 @@ main {
 }
 /*End CSS for officers*/
 
+/*CSS for footer*/
+#footer{
+	padding-top: 25px;
+	padding-bottom: 5px;
+	background-color: rgba(34,90,157,0.7);
+}
+
+.footer-logo{
+	max-width: 200px;
+}
+
+.footer-title{
+	color: rgba(255,255,255,1);
+}
+
+.footer-title-text{
+	color: rgba(255,255,255,1);
+	margin-top: -5px;
+}
+
+.footer-section-title{
+	text-align: center;
+}
+
+.sub-list{
+	padding-left: 25px;
+}
+
+/*End CSS for footer*/
+
 /*Generic CSS*/
 .header-center{
 	text-align: center;
@@ -105,4 +130,25 @@ main {
 .separate{
 	padding-top: 10px;
 	padding-bottom: 10px;
+}
+
+@media screen and (max-width: 992px)
+{
+	.officer-img{
+		padding: 35px;
+	}
+}
+
+@media screen and (max-width: 768px)
+{
+	.footer-section{
+		text-align: center;
+	}
+}
+
+@media screen and (max-width: 450px)
+{
+	.officer-img{
+		padding: 25px;
+	}
 }
