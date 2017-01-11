@@ -17,7 +17,7 @@
  	});
 
  	
- 	var nav_changed = true;
+ 	var nav_changed = false;
  	var preloaderFadeTimeout = 500;
 
  	$(window).load(function(){
@@ -27,9 +27,15 @@
 
  	$(window).scroll(function() {
  		var landing_height = $('#landing').outerHeight();
+ 		if (landing_height == null && nav_changed == false){
+ 			$('nav').addClass('white');
+ 				$('nav').removeClass('transparent');
+ 				$('#calendar_dropdown').addClass('white');
+ 				$('#calendar_dropdown').removeClass('transparent');		
+ 		}
+ 		nav_changed = true;
  		if (($(window).scrollTop() + $(window).height()) <= 1.7 * landing_height){
  			if (nav_changed == true){
- 				console.log("height less");
  				$('nav').removeClass('white');
  				$('nav').addClass('transparent');
 
