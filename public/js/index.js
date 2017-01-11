@@ -2,7 +2,7 @@
 
  $(document).ready(function(){
  	$(".button-collapse").sideNav();
- 	
+
  	$(function() {
  		$('a[href*="#"]:not([href="#"])').click(function() {
  			if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
@@ -54,9 +54,6 @@
     	selectMonths: true, // Creates a dropdown to control month
     	selectYears: 15 // Creates a dropdown of 15 years to control year
   	});
-
-  	 $(document).ready(function(){
-      $('.slider').slider();
-    });
+ 	$('.slider').slider();
 
  });

@@ -40,6 +40,10 @@ main {
 	filter: blur(5px);
 }
 
+.slider h3{
+	font-weight: bold;
+}
+
 /*CSS for sponsors*/
 #sponsors{
 	padding-left: 5%;
@@ -137,6 +141,15 @@ main {
 	padding-bottom: 10px;
 }
 
+.caption {
+	background-color: rgba(128,128,128,0.5);
+	padding: 15px;
+	margin: 5px;
+}
+
+.caption p {
+	font-size: large !important;
+}
 
 @-moz-keyframes unspin { 100% { -moz-transform: rotate(-360deg); } }
 @-webkit-keyframes unspin { 100% { -webkit-transform: rotate(-360deg); } }
