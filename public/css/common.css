@@ -22,7 +22,9 @@ form label {
      border-bottom: 1px solid #225a9d !important;
      box-shadow: 0 1px 0 0 #225a9d !important;
    }
-
+#sidenav-overlay{
+  display: none !important;
+}
 
    .picker__weekday-display{
    		background-color: #225a9d;
