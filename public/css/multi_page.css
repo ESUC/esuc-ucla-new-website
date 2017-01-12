@@ -26,7 +26,7 @@ main {
 	background-image: url('/img/engineering-building.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
-	min-height: 900px;
+	min-height: 100vh;
 }
 
 #landing-menu ul li {
