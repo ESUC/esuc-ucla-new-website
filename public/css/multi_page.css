@@ -145,13 +145,14 @@ main {
 }
 
 .caption {
-	background-color: rgba(128,128,128,0.5);
+	background-color: rgba(255,255,255,0.6);
 	padding: 15px;
 	margin: 5px;
 }
 
 .caption p {
 	font-size: large !important;
+	color: black !important;
 }
 
 @-moz-keyframes unspin { 100% { -moz-transform: rotate(-360deg); } }
