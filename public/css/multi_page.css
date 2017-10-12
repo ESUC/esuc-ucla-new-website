@@ -30,6 +30,7 @@ main {
 	background-repeat: no-repeat;
 	background-size: cover;
 	min-height: 100vh;
+	padding-top: 25%;
 }
 
 #landing-menu ul li {
@@ -46,6 +47,47 @@ main {
 .slider h3{
 	font-weight: bold;
 }
+
+/*CSS for landing*/
+.landing-text {
+	text-align: center;
+	color: #ffffff;
+}
+
+.landing-desc {
+	font-size: 24px;
+}
+
+.bruin-bear {
+	display: block;
+	margin: 0 auto;
+}
+
+.event-button {
+	background-color: #246bce;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 24px;
+    width: 20%;
+    position: relative;
+    margin: 0 auto;
+    cursor: pointer;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    -webkit-transition: opacity 2s;
+    -moz-transition: opacity 2s;
+    -o-transition: opacity 2s;
+    transition: opacity 2s;
+}
+
+.event-button:hover {
+	background-color: #246bce;
+	opacity: 0.8;
+}
+/*End CSS for landing*/
 
 /*CSS for sponsors*/
 #sponsors{
@@ -170,7 +212,7 @@ main {
 	}
 }
 
-@media screen and (max-width: 768px)
+@media screen and (max-width: 992px)
 {
 	.footer-section{
 		text-align: center;
