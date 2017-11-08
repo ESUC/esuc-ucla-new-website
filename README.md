@@ -4,6 +4,7 @@ Feel free to check it out [here](http://esuc-website.herokuapp.com/).
 
 ## Contributors:
 2017-2018: Kyle Wong (webmaster)
+
 2016-2017: Avi Kejariwal (webmaster), Kyle Wong (intern), Danny Nguyen (intern)
 
 ## Developing the website locally
