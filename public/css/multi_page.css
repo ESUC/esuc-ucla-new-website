@@ -58,6 +58,7 @@ main {
 
 .landing-desc {
 	font-size: 24px;
+	font-weight: normal;
 }
 
 .bruin-bear {
@@ -88,6 +89,15 @@ main {
 .event-button:hover {
 	background-color: #246bce;
 	opacity: 0.8;
+}
+
+.survival-guide {
+	position: relative;
+	text-align: center;
+	color: #ffffff;
+	font-size: 24px;
+	font-weight: normal;
+	margin-top: 100px;
 }
 /*End CSS for landing*/
 
