@@ -29,6 +29,8 @@ main {
 	background-image: url('/img/engineering-building.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
+	max-width: 100%;
+	height: auto;
 	min-height: 100vh;
 	padding-top: 15%;
 	padding-left: 20%;
