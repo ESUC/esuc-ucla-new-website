@@ -17,6 +17,10 @@
     "url": "https://github.com/ESUC/esuc-ucla-new-website/issues"
   },
   "homepage": "https://github.com/ESUC/esuc-ucla-new-website#readme",
+  "engines": {
+    "node": "12.1.0",
+    "npm": "6.9.0"
+  },
   "dependencies": {
     "body-parser": "^1.15.2",
     "cloudinary": "^1.5.0",
