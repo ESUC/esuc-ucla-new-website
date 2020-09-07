@@ -1,18 +1,31 @@
 <!DOCTYPE html>
+
 <head>
 	<title>UCLA Engineering Calendar</title>
 	<% include partials/dependencies %>
 	<link rel="stylesheet" href="css/single_page.css" type='text/css'>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.2.0/main.min.css">
+	<!-- <link href='https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.css' rel='stylesheet' /> -->
+	<script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.2.0/main.min.js"></script>
 </head>
+
 <body>
 	<% include partials/header %>
 	<main>
+
+		<br>
+		<br>
+		<br>
 		<div id="engineering-calendar">
 			<h2 class="center">ENGINEERING CALENDAR</h2>
-			<p>The Engineering Calendar contains the comprehensive list of events hosted by various engineering clubs on campus. You can find all the upcoming, present and past events right here! Note to view the ESUC lounge calender and request bookings head over to the ESUC lounge tab. </p>
+			<p>The Engineering Calendar contains the comprehensive list of events hosted by various engineering clubs on
+				campus. You can find all the upcoming, present and past events right here! Note to view the ESUC lounge
+				calender and request bookings head over to the ESUC lounge tab. </p>
 			<% include partials/preloader %>
 			<div class="section col-md-12">
-				<iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=adb3nval8fglknomqdik3brgd0%40group.calendar.google.com&amp;color=%23691426&amp;src=acmbruins%40gmail.com&amp;color=%230F4B38&amp;src=aiaaucla%40gmail.com&amp;color=%230F4B38&amp;src=mg89t43rdbasj67i2jpekov5ag%40group.calendar.google.com&amp;color=%23853104&amp;src=bmesucla%40gmail.com&amp;color=%235F6B02&amp;src=g.ucla.edu_pm45q293j7dtpnirhfhqcns5u0%40group.calendar.google.com&amp;color=%23875509&amp;src=en.usa%23holiday%40group.v.calendar.google.com&amp;color=%2328754E&amp;src=t30pjp3764ll7nfs2f2ml980bg%40group.calendar.google.com&amp;color=%238D6F47&amp;src=esuc.webmaster%40gmail.com&amp;color=%23AB8B00&amp;src=f9ce4unubatjcjptpksnsoakco%40group.calendar.google.com&amp;color=%238D6F47&amp;src=hkn.ucla%40gmail.com&amp;color=%23711616&amp;src=m980q306mg3rfvuh7jhm43fr5s%40group.calendar.google.com&amp;color=%23691426&amp;src=6dg8lk5ff6m6kdtleech7jrlq8%40group.calendar.google.com&amp;color=%23182C57&amp;src=uclatec%40gmail.com&amp;color=%235229A3&amp;src=esuc.secretary%40gmail.com&amp;color=%23853104&amp;src=umh1upatck4qihkji9k6ntpc9k%40group.calendar.google.com&amp;color=%235229A3&amp;src=linux.ucla.edu_0vqq44bmrfmohv0cpuh68u0ai0%40group.calendar.google.com&amp;color=%23875509&amp;src=sbql2ii7gpcg411f8ksuv1f5vo%40group.calendar.google.com&amp;color=%2329527A&amp;src=smvucla%40gmail.com&amp;color=%23B1365F&amp;src=upe.ucla%40gmail.com&amp;src=re16eftinu828nfupbmkep8ue0%40group.calendar.google.com&amp;color=%23182C57&amp;ctz=America%2FLos_Angeles" style="border-width:0" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
+				<iframe
+					src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=adb3nval8fglknomqdik3brgd0%40group.calendar.google.com&amp;color=%23691426&amp;src=acmbruins%40gmail.com&amp;color=%230F4B38&amp;src=aiaaucla%40gmail.com&amp;color=%230F4B38&amp;src=mg89t43rdbasj67i2jpekov5ag%40group.calendar.google.com&amp;color=%23853104&amp;src=bmesucla%40gmail.com&amp;color=%235F6B02&amp;src=g.ucla.edu_pm45q293j7dtpnirhfhqcns5u0%40group.calendar.google.com&amp;color=%23875509&amp;src=en.usa%23holiday%40group.v.calendar.google.com&amp;color=%2328754E&amp;src=t30pjp3764ll7nfs2f2ml980bg%40group.calendar.google.com&amp;color=%238D6F47&amp;src=esuc.webmaster%40gmail.com&amp;color=%23AB8B00&amp;src=f9ce4unubatjcjptpksnsoakco%40group.calendar.google.com&amp;color=%238D6F47&amp;src=hkn.ucla%40gmail.com&amp;color=%23711616&amp;src=m980q306mg3rfvuh7jhm43fr5s%40group.calendar.google.com&amp;color=%23691426&amp;src=6dg8lk5ff6m6kdtleech7jrlq8%40group.calendar.google.com&amp;color=%23182C57&amp;src=uclatec%40gmail.com&amp;color=%235229A3&amp;src=esuc.secretary%40gmail.com&amp;color=%23853104&amp;src=umh1upatck4qihkji9k6ntpc9k%40group.calendar.google.com&amp;color=%235229A3&amp;src=linux.ucla.edu_0vqq44bmrfmohv0cpuh68u0ai0%40group.calendar.google.com&amp;color=%23875509&amp;src=sbql2ii7gpcg411f8ksuv1f5vo%40group.calendar.google.com&amp;color=%2329527A&amp;src=smvucla%40gmail.com&amp;color=%23B1365F&amp;src=upe.ucla%40gmail.com&amp;src=re16eftinu828nfupbmkep8ue0%40group.calendar.google.com&amp;color=%23182C57&amp;ctz=America%2FLos_Angeles"
+					style="border-width:0" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
 			</div>
 		</div>
 
@@ -21,15 +34,276 @@
 		<br>
 
 		<div id="engineering-calendar">
-			<h2 class="center">Industry Recruitment Calendar</h2>
-			<p>The Industry Recruitment Calendar contains a list of industry recruitment related events hosted by various engineering clubs, the career center, and the office of academic and student affairs.</p>
+			<h2 class="center">Test Calendar</h2>
+			<p>The Engineering Calendar contains the comprehensive list of events hosted by various engineering clubs on
+				campus. You can find all the upcoming, present and past events right here! Note to view the ESUC lounge
+				calender and request bookings head over to the ESUC lounge tab. </p>
+				<br>
+
+
 			<% include partials/preloader %>
-			<div class="section col-md-12">
-				<iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=tn50r7iie1olab1kclhbjcj6rc%40group.calendar.google.com&amp;color=%2342104A&amp;src=06des4gl36nhufnptgolsifq78%40group.calendar.google.com&amp;color=%235229A3&amp;ctz=America%2FLos_Angeles" style="border-width:0" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
+			<!-- <div class="section col-md-12">
+				<p>
+					<input type="checkbox" class="filled-in" id="one" />
+					<label for="one">ACM</label>
+				</p>
+				<div id='calendar'></div>
+			</div> -->
+
+			<div class="row">
+				<div class="col s12 m4 l2 f-tray" style="">
+					<input type="text" id="f-search" onkeyup="search()" placeholder="Search...">
+
+					<!-- TODO - programmatically add checkboxes -->
+					<p>
+						<input type="checkbox" class="filled-in f-check" id="acm-general-f" onchange="update_filter()"  checked/>
+						<label for="acm-general-f">ACM</label>
+					</p>
+					<p>
+						<input type="checkbox" class="filled-in f-check" id="aiaa-f" onchange="update_filter()"  checked/>
+						<label for="aiaa-f">AIAA</label>
+					</p>
+					<p>
+						<input type="checkbox" class="filled-in f-check" id="alche-f" onchange="update_filter()"  checked/>
+						<label for="alche-f">AIChE</label>
+					</p>
+					<p>
+						<input type="checkbox" class="filled-in f-check" id="asce-f" onchange="update_filter()"  checked/>
+						<label for="asce-f">ASCE</label>
+					</p>
+
+					<!-- TODO - add check all / uncheck all buttons -->
+				</div>
+				<div class="col s12 m8 l10">
+					<div id='calendar'></div>
+				</div>
 			</div>
 		</div>
+
+		<br>
+		<br>
+		<br>
+		<div id="engineering-calendar">
+			<h2 class="center">Industry Recruitment Calendar</h2>
+			<p>The Industry Recruitment Calendar contains a list of industry recruitment related events hosted by
+				various engineering clubs, the career center, and the office of academic and student affairs.</p>
+			<% include partials/preloader %>
+			<div class="section col-md-12">
+				<iframe
+					src="https://calendar.google.com/calendar/embed?showTitle=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=tn50r7iie1olab1kclhbjcj6rc%40group.calendar.google.com&amp;color=%2342104A&amp;src=06des4gl36nhufnptgolsifq78%40group.calendar.google.com&amp;color=%235229A3&amp;ctz=America%2FLos_Angeles"
+					style="border-width:0" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
+			</div>
+		</div>
+
 
 	</main>
 	<% include partials/footer %>
 
+	<script>
+		var class_names = ['acm-general', 'aiaa', 'alche', 'asce', 'bmes', 'bhs', 'uip', 'ite', 'hkn', 'swe', 'ieee', 'upe'];
+		
+		let status = new Map();
+
+		// Start with everything checked
+		class_names.forEach(element => status.set(element, true));
+
+		function update_filter() {
+			class_names.forEach(element => {
+				if (document.getElementById(element + '-f') != null) {
+					var new_status = document.getElementById(element + '-f').checked;
+					if (status.get(element) != new_status) {
+						status.set(element, new_status);
+						if (new_status)
+							$("." + element).fadeIn();
+						else
+							$("." + element).fadeOut();
+					}
+				}
+			});
+		}
+
+		function update_events() {
+			for (let [key, value] of status) {
+				if (value) {
+					//$("." + element).show();
+				} else {
+					$("." + key).css("display", "none");
+				}
+
+			}
+		}
+
+		function search() {
+			
+		}
+
+		// var myClasses = document.getElementsByClassName("acm-general"),
+		// 	i = 0,
+		// 	l = myClasses.length;
+
+		// for (i; i < l; i++) {
+		// 	myClasses[i].style.display = 'none';
+		// }
+
+		var calendar = {};
+
+		document.addEventListener('DOMContentLoaded', function () {
+			var calendarEl = document.getElementById('calendar');
+			calendar = new FullCalendar.Calendar(calendarEl, {
+				//plugins: [googleCalendarPlugin],
+				initialView: 'dayGridMonth',
+				themeSystem: 'standard',
+				height: '70vh',
+				googleCalendarApiKey: 'AIzaSyAATfuHVUc-akmJe_EkYkvhvBMwXPk7agw',
+				nowIndicator: 'true',
+				scrollTime: '08:30:00',
+				eventDidMount: function(arg) {
+					let event = arg.event;
+					console.log(event.source.internalEventSource._raw.className);
+					if (!status.get(event.source.internalEventSource._raw.className)) {
+						event.display = 'none';
+						$("." + event.source.internalEventSource._raw.className).css("display", "none");
+					}
+				},
+				customButtons: {
+					filter: {
+						text: 'filter',
+						click: function() {
+							update_events();
+						}
+					},
+					today_: {
+						text: 'today',
+						click: function() {
+							calendar.today();
+							// setTimeout(500, update_events());
+						}
+					},
+					prev_: {
+						text: '<',
+						click: function() {
+							calendar.prev();
+							// setTimeout(500, update_events());
+						}
+					},
+					next_: {
+						text: '>',
+						click: function() {
+							calendar.next();
+							// setTimeout(500, update_events());
+						}
+					},
+					dayGridMonth_: {
+						text: 'month',
+						click: function() {
+							calendar.changeView("dayGridMonth");
+							// setTimeout(500, update_events());
+						}
+					},
+					timeGridWeek_: {
+						text: 'week',
+						click: function() {
+							calendar.changeView("timeGridWeek");
+							// setTimeout(500, update_events());
+						}
+					},
+					listWeek_: {
+						text: 'list',
+						click: function() {
+							calendar.changeView("listWeek");
+							// setTimeout(500, update_events());
+						}
+					},
+				},
+				buttonIcons: {
+					prev_: 'chevron-left',
+					next_: 'chevron-right'	
+				},
+				headerToolbar: {
+					start: 'filter today_ prev_,next_',
+					center: 'title',
+					end: 'dayGridMonth_,timeGridWeek_,listWeek_'
+				},
+				eventClick: function (info) {
+					info.jsEvent.preventDefault(); // don't let the browser navigate
+
+					if (info.event.url) {
+						window.open(info.event.url);
+					}
+				},
+				// eventRender: function(event, element, view) {
+				// 	element.description = event.description;
+				// 	return status.has(event.classNames.slice(-1)[0]) && status.get(event.classNames.slice(-1)[0]);
+				// },
+				viewDidMount: function() {
+					console.log("view mounted");
+				},
+				eventSources: [
+					{
+						googleCalendarId: 'acmbruins@gmail.com',
+						className: 'acm-general',
+						color: '#3B59ED'
+					},
+					{
+						googleCalendarId: 'aiaaucla@gmail.com',
+						className: 'aiaa',
+						color: '#CECFCF'
+					},
+					{
+						googleCalendarId: 'mg89t43rdbasj67i2jpekov5ag@group.calendar.google.com',
+						className: 'alche',
+						color: '#81C5E2'
+					},
+					{
+						googleCalendarId: 'tn50r7iie1olab1kclhbjcj6rc@group.calendar.google.com',
+						className: 'asce',
+						color: '#1FCBE9'
+					},
+					{
+						googleCalendarId: 'bmesucla@gmail.com',
+						className: 'bmes',
+						color: '#42514C'
+					},
+					{
+						googleCalendarId: 'g.ucla.edu_pm45q293j7dtpnirhfhqcns5u0@group.calendar.google.com',
+						className: 'bhs',
+						color: '#9DD391'
+					},
+					{
+						googleCalendarId: '06des4gl36nhufnptgolsifq78@group.calendar.google.com',
+						className: 'uip',
+						color: '#2b2b2b'
+					},
+					{
+						googleCalendarId: 't30pjp3764ll7nfs2f2ml980bg@group.calendar.google.com',
+						className: 'ite',
+						color: '#E94F1D'
+					},
+					{
+						googleCalendarId: 'hkn.ucla@gmail.com',
+						className: 'hkn',
+						color: '#B80634'
+					},
+					{
+						googleCalendarId: 'm980q306mg3rfvuh7jhm43fr5s@group.calendar.google.com',
+						className: 'swe',
+						color: '#584A6A'
+					},
+					{
+						googleCalendarId: 'umh1upatck4qihkji9k6ntpc9k@group.calendar.google.com',
+						className: 'ieee',
+						color: '#00629B'
+					},
+					{
+						googleCalendarId: 'upe.ucla@gmail.com',
+						className: 'upe',
+						color: '#2E67CF'
+					},
+				]
+			});
+			calendar.render();
+		});
+
+
+	</script>
 </body>
