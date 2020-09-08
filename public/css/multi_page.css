@@ -136,7 +136,7 @@ main {
 .officer-img{
 	max-width: 250px;
 	margin: auto;
-	padding: 50px;
+	padding: 30px;
 	background-image: url(../img/hexagon-gray.png);
 	-webkit-background-size: cover;
     -moz-background-size: cover;
