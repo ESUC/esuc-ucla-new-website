@@ -1,0 +1,22 @@
+.f-tray {
+    height: 70vh;
+}
+
+#orgs-list {
+    max-height: calc(70vh - 3rem);
+    overflow-y: scroll;
+}
+
+#acm-general-f:checked+label:after {
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ff0000 !important;
+    background-color: #ff0404 !important;
+    z-index: 0;
+}
+
+input:not([type]):focus:not([readonly]), input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly]), input[type=email]:focus:not([readonly]), input[type=url]:focus:not([readonly]), input[type=time]:focus:not([readonly]), input[type=date]:focus:not([readonly]), input[type=datetime]:focus:not([readonly]), input[type=datetime-local]:focus:not([readonly]), input[type=tel]:focus:not([readonly]), input[type=number]:focus:not([readonly]), input[type=search]:focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {
+    border-bottom: 1px solid #648bba !important;
+    box-shadow: 0 1px 0 0 #648bba !important;
+}
