@@ -2,21 +2,199 @@
     height: 70vh;
 }
 
-#orgs-list {
-    max-height: calc(70vh - 3rem);
-    overflow-y: scroll;
+.f-button {
+    display: inline-block;
+    height: 2rem;
+    margin-top: 1rem;
+    border: 0.1em solid #FFFFFF;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: #FFFFFF;
+    background-color: #2C3E50;
+    text-align: center;
+    transition: all 0.2s;
 }
 
-#acm-general-f:checked+label:after {
-    top: 0;
-    width: 20px;
-    height: 20px;
-    border: 2px solid #ff0000 !important;
-    background-color: #ff0404 !important;
-    z-index: 0;
+.f-button:hover {
+    color: #FFFFFF;
+    background-color: #648bba;
+}
+
+.f-button:focus {
+    color: #FFFFFF;
+    background-color: #2C3E50; 
+}
+
+@media all and (max-width:30em) {
+    a.button1 {
+        display: block;
+        margin: 0.4em auto;
+    }
+}
+
+#orgs-list {
+    max-height: calc(70vh - 7rem);
+    overflow-y: scroll;
+    padding-bottom: 20px;
 }
 
 input:not([type]):focus:not([readonly]), input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly]), input[type=email]:focus:not([readonly]), input[type=url]:focus:not([readonly]), input[type=time]:focus:not([readonly]), input[type=date]:focus:not([readonly]), input[type=datetime]:focus:not([readonly]), input[type=datetime-local]:focus:not([readonly]), input[type=tel]:focus:not([readonly]), input[type=number]:focus:not([readonly]), input[type=search]:focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {
     border-bottom: 1px solid #648bba !important;
     box-shadow: 0 1px 0 0 #648bba !important;
 }
+
+#acm-f:checked+label:after {
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #3B59ED !important;
+    background-color: #3B59ED !important;
+    z-index: 0;
+}
+
+#aiaa-f:checked+label:after {
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #031C4B !important;
+    background-color: #031C4B !important;
+    z-index: 0;
+}
+
+#alche-f:checked+label:after {
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #2123c1 !important;
+    background-color: #2123c1 !important;
+    z-index: 0;
+}
+
+#asce-f:checked+label:after {
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #209DCB !important;
+    background-color: #209DCB !important;
+    z-index: 0;
+}
+
+#beam-f:checked+label:after {
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #E8552C !important;
+    background-color: #E8552C !important;
+    z-index: 0;
+}
+
+#bmes-f:checked+label:after {
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #4385EF !important;
+    background-color: #4385EF !important;
+    z-index: 0;
+}
+
+#bhs-f:checked+label:after {
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #9ED395 !important;
+    background-color: #9ED395 !important;
+    z-index: 0;
+}
+
+#calgeo-f:checked+label:after {
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #FBE1C1 !important;
+    background-color: #FBE1C1 !important;
+    z-index: 0;
+}
+
+#hkn-f:checked+label:after {
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #737373 !important;
+    background-color: #737373 !important;
+    z-index: 0;
+}
+
+#ieee-f:checked+label:after {
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #056298 !important;
+    background-color: #056298 !important;
+    z-index: 0;
+}
+
+#ieee-watt-f:checked+label:after {
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #33B679 !important;
+    background-color: #33B679 !important;
+    z-index: 0;
+}
+
+#uip-f:checked+label:after {
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #000000 !important;
+    background-color: #000000 !important;
+    z-index: 0;
+}
+
+#ite-f:checked+label:after {
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #1B6B95 !important;
+    background-color: #1B6B95 !important;
+    z-index: 0;
+}
+
+#mrs-f:checked+label:after {
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #73947e !important;
+    background-color: #73947e !important;
+    z-index: 0;
+}
+
+#solar-f:checked+label:after {
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ffb81c !important;
+    background-color: #ffb81c !important;
+    z-index: 0;
+}
+
+#swe-f:checked+label:after {
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #584A6A !important;
+    background-color: #584A6A !important;
+    z-index: 0;
+}
+
+#upe-f:checked+label:after {
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #333333 !important;
+    background-color: #333333 !important;
+    z-index: 0;
+}
+
