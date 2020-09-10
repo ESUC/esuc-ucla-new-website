@@ -27,13 +27,6 @@
     background-color: #2C3E50; 
 }
 
-@media all and (max-width:30em) {
-    a.button1 {
-        display: block;
-        margin: 0.4em auto;
-    }
-}
-
 #orgs-list {
     max-height: calc(70vh - 7rem);
     overflow-y: scroll;
