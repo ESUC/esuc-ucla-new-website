@@ -97,7 +97,7 @@ h2, h3 {
 }
 
 .footer-section-title{
-  text-align: center;
+  text-align: left;
 }
 
 .sub-list{
@@ -106,3 +106,22 @@ h2, h3 {
 
 /*End CSS for footer*/
 
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 1px grey; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #d6d6d6; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #969696; 
+}
