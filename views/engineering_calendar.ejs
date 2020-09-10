@@ -63,7 +63,8 @@
 						</p>
 					<% }); %>
 					</div>
-					<!-- TODO - add check all / uncheck all buttons -->
+					<button type="button" class="f-button f-enable" onclick="setAll(true)">Show All</button>
+					<button type="button" class="f-button f-enable" onclick="setAll(false)">Hide All</button>
 				</div>
 				<div class="col s12 m8 l10">
 					<div id='calendar'></div>
@@ -142,6 +143,15 @@
 				}
         	}
 		}
+
+		function setAll(state) {
+			let checkboxes = document.getElementsByClassName("f-check");
+			for (var checkbox of checkboxes) {
+				checkbox.checked = state;
+			}
+			update_filter();
+		}
+
 
 		var calendar = {};
 
