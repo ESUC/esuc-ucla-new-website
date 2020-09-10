@@ -1,35 +1,184 @@
 <!DOCTYPE html>
+
 <head>
 	<title>UCLA Engineering Calendar</title>
 	<% include partials/dependencies %>
 	<link rel="stylesheet" href="css/single_page.css" type='text/css'>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.2.0/main.min.css">
+	<!-- <link href='https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.css' rel='stylesheet' /> -->
+	<script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.2.0/main.min.js"></script>
+	<link rel="stylesheet" href="css/calendar.css" type='text/css'>
 </head>
+
 <body>
 	<% include partials/header %>
 	<main>
+		<br>
+		<br>
+
 		<div id="engineering-calendar">
-			<h2 class="center">ENGINEERING CALENDAR</h2>
-			<p>The Engineering Calendar contains the comprehensive list of events hosted by various engineering clubs on campus. You can find all the upcoming, present and past events right here! Note to view the ESUC lounge calender and request bookings head over to the ESUC lounge tab. </p>
-			<% include partials/preloader %>
+			<h2 class="center">Engineering Calendar</h2>
+			<p>The Engineering Calendar contains the comprehensive list of events hosted by various engineering clubs on
+				campus. You can browse through all current, past, and future events, or filter by organization. Click on an event to see more information, and add it to your own calendar! </p>
+			<br>
+
+			<div class="row">
+				<div class="col s12 m4 l2 f-tray" style="">
+					<input type="text" id="f-search" onkeyup="search()" placeholder="Search...">
+					<div id="orgs-list">
+						<% orgs.forEach(function(o) { %>
+						<p>
+							<input type="checkbox" class="filled-in f-check" id="<%= o.className %>-f"
+								onchange="update_filter()" checked />
+							<label for="<%= o.className %>-f"><%= o.name %></label>
+						</p>
+						<% }); %>
+					</div>
+					<button type="button" class="f-button f-enable" onclick="setAll(true)">Show All</button>
+					<button type="button" class="f-button f-enable" onclick="setAll(false)">Hide All</button>
+				</div>
+				<div class="col s12 m8 l10">
+					<div id='calendar'></div>
+				</div>
+			</div>
+		</div>
+		<br>
+		<br>
+
+		<div id="highlights-calendar">
+			<h2 class="center">Highlights Calendar</h2>
+			<p>The Highlights Calendar gives a spotlight to the most prominent events taking place in the engineering student community, including various organization's general meetings, career fairs, and more!</p>
 			<div class="section col-md-12">
-				<iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=adb3nval8fglknomqdik3brgd0%40group.calendar.google.com&amp;color=%23691426&amp;src=acmbruins%40gmail.com&amp;color=%230F4B38&amp;src=aiaaucla%40gmail.com&amp;color=%230F4B38&amp;src=mg89t43rdbasj67i2jpekov5ag%40group.calendar.google.com&amp;color=%23853104&amp;src=bmesucla%40gmail.com&amp;color=%235F6B02&amp;src=g.ucla.edu_pm45q293j7dtpnirhfhqcns5u0%40group.calendar.google.com&amp;color=%23875509&amp;src=en.usa%23holiday%40group.v.calendar.google.com&amp;color=%2328754E&amp;src=t30pjp3764ll7nfs2f2ml980bg%40group.calendar.google.com&amp;color=%238D6F47&amp;src=esuc.webmaster%40gmail.com&amp;color=%23AB8B00&amp;src=f9ce4unubatjcjptpksnsoakco%40group.calendar.google.com&amp;color=%238D6F47&amp;src=hkn.ucla%40gmail.com&amp;color=%23711616&amp;src=m980q306mg3rfvuh7jhm43fr5s%40group.calendar.google.com&amp;color=%23691426&amp;src=6dg8lk5ff6m6kdtleech7jrlq8%40group.calendar.google.com&amp;color=%23182C57&amp;src=uclatec%40gmail.com&amp;color=%235229A3&amp;src=esuc.secretary%40gmail.com&amp;color=%23853104&amp;src=umh1upatck4qihkji9k6ntpc9k%40group.calendar.google.com&amp;color=%235229A3&amp;src=linux.ucla.edu_0vqq44bmrfmohv0cpuh68u0ai0%40group.calendar.google.com&amp;color=%23875509&amp;src=sbql2ii7gpcg411f8ksuv1f5vo%40group.calendar.google.com&amp;color=%2329527A&amp;src=smvucla%40gmail.com&amp;color=%23B1365F&amp;src=upe.ucla%40gmail.com&amp;src=re16eftinu828nfupbmkep8ue0%40group.calendar.google.com&amp;color=%23182C57&amp;ctz=America%2FLos_Angeles" style="border-width:0" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
+				<div id='h-calendar'></div>
 			</div>
 		</div>
 
 		<br>
 		<br>
-		<br>
-
-		<div id="engineering-calendar">
-			<h2 class="center">Industry Recruitment Calendar</h2>
-			<p>The Industry Recruitment Calendar contains a list of industry recruitment related events hosted by various engineering clubs, the career center, and the office of academic and student affairs.</p>
-			<% include partials/preloader %>
-			<div class="section col-md-12">
-				<iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=tn50r7iie1olab1kclhbjcj6rc%40group.calendar.google.com&amp;color=%2342104A&amp;src=06des4gl36nhufnptgolsifq78%40group.calendar.google.com&amp;color=%235229A3&amp;ctz=America%2FLos_Angeles" style="border-width:0" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
-			</div>
-		</div>
 
 	</main>
 	<% include partials/footer %>
 
+	<script>
+		// var class_names = ['acm-general', 'aiaa', 'alche', 'asce', 'bmes', 'bhs', 'uip', 'ite', 'hkn', 'swe', 'ieee', 'upe'];
+
+		var orgs_list = <%- JSON.stringify(orgs) %>;
+
+		let status = new Map();
+
+		// Start with everything checked
+		orgs_list.forEach(element => status.set(element.className, true));
+
+		function update_filter() {
+			orgs_list.forEach(element => {
+				if (document.getElementById(element.className + '-f') != null) {
+					var new_status = document.getElementById(element.className + '-f').checked;
+					if (status.get(element.className) != new_status) {
+						status.set(element.className, new_status);
+						if (new_status)
+							$("." + element.className).fadeIn();
+						else
+							$("." + element.className).fadeOut();
+					}
+				}
+			});
+		}
+
+		function update_events() {
+			for (let [key, value] of status) {
+				if (value) {
+					//$("." + element).show();
+				} else {
+					$("." + key).css("display", "none");
+				}
+
+			}
+		}
+
+		function search() {
+			let input = document.getElementById("f-search").value.replace(/[^0-9a-z]/gi, '').toLowerCase();
+			let checkboxes = document.getElementsByClassName("f-check");
+			for (let item of checkboxes) {
+				if (item.id.search(input) == -1) {
+					document.getElementById(item.id).style.display = 'none';
+					document.getElementById(item.id + '-l').style.display = 'none';
+				} else {
+					document.getElementById(item.id).style.display = 'inline-block';
+					document.getElementById(item.id + '-l').style.display = 'inline-block';
+				}
+			}
+		}
+
+		function setAll(state) {
+			let checkboxes = document.getElementsByClassName("f-check");
+			for (var checkbox of checkboxes) {
+				checkbox.checked = state;
+			}
+			update_filter();
+		}
+
+
+		var calendar = {};
+
+		document.addEventListener('DOMContentLoaded', function () {
+			var calendarEl = document.getElementById('calendar');
+			calendar = new FullCalendar.Calendar(calendarEl, {
+				initialView: 'dayGridMonth',
+				themeSystem: 'standard',
+				height: '70vh',
+				googleCalendarApiKey: 'AIzaSyAATfuHVUc-akmJe_EkYkvhvBMwXPk7agw',
+				nowIndicator: 'true',
+				scrollTime: '08:30:00',
+				eventDidMount: function (arg) {
+					let event = arg.event;
+					if (!status.get(event.source.internalEventSource._raw.className)) {
+						$("." + event.source.internalEventSource._raw.className).css("display", "none");
+					}
+				},
+				headerToolbar: {
+					start: 'today prev,next',
+					center: 'title',
+					end: 'dayGridMonth,timeGridWeek,listWeek'
+				},
+				eventClick: function (info) {
+					info.jsEvent.preventDefault(); // don't let the browser navigate
+
+					if (info.event.url) {
+						window.open(info.event.url);
+					}
+				},
+				eventSources: orgs_list,
+			});
+			calendar.render();
+
+			var highlightsEl = document.getElementById('h-calendar');
+			highlightsC = new FullCalendar.Calendar(highlightsEl, {
+				initialView: 'dayGridMonth',
+				themeSystem: 'standard',
+				height: '70vh',
+				googleCalendarApiKey: 'AIzaSyAATfuHVUc-akmJe_EkYkvhvBMwXPk7agw',
+				nowIndicator: 'true',
+				scrollTime: '08:30:00',
+				headerToolbar: {
+					start: 'today prev,next',
+					center: 'title',
+					end: 'dayGridMonth,timeGridWeek,listWeek'
+				},
+				eventClick: function (info) {
+					info.jsEvent.preventDefault(); // don't let the browser navigate
+					if (info.event.url) {
+						window.open(info.event.url);
+					}
+				},
+				eventSources: [
+					{
+						googleCalendarId: 'esuc.ucla.publicity@gmail.com'
+					},
+				]
+			});
+			highlightsC.render();
+		});
+
+
+	</script>
 </body>

@@ -9,8 +9,12 @@ var sg = require('sendgrid')(process.env.SENDGRID_APIKEY);
 var helper = require('sendgrid').mail;
 const formidable = require('formidable');
 const util = require('util');
-var firebase = require("firebase");
 
+
+
+/* disable firebase & cloudinary
+
+var firebase = require("firebase");
 var cloudinary = require('cloudinary');
 
 cloudinary.config({ 
@@ -29,7 +33,11 @@ var config = {
 
 firebase.initializeApp(config);
 
-var eventsDatabase = firebase.database().ref().child('events');
+var eventsDatabase = firebase.database().ref().child('events'); 
+
+*/
+
+var orgs = require('./orgs.json');
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -47,6 +55,7 @@ router.get('/', function(req, res){
 
 router.get('/engineering_calendar/', function(req, res){
 	console.log("Received Engineering Calendars Request");
+	res.locals.orgs = orgs;
 	res.render('engineering_calendar');
 });
 
@@ -60,6 +69,16 @@ router.get('/add_event/', function(req, res){
 	res.render('add_event');
 });
 
+
+// DEBUG
+// router.get('/checkbox/', function(req, res){
+// 	console.log("Received checkbox");
+// 	res.locals.orgs = orgs;
+// 	res.render('checkbox_test');
+// });
+
+
+/*
 router.post('/upload_event', function(req, res){
 	var form = new formidable.IncomingForm();
 	var fields, file;
@@ -77,14 +96,18 @@ router.post('/upload_event', function(req, res){
 		//console.log(file);
 		console.log("form end");
 		if (file.size == 0){
+			
 			console.log("no flier");
 			fields['flierAdded'] = false;
 			addEventToFirebase(fields, function(data){
 				sendEmail(data);
 			});
+			
 		}
 		else {
 			fields['flierAdded'] = true;
+			
+			
 			cloudinary.uploader.upload(file.path, function(result){
 				fields['cloudinaryName'] = result.public_id;
 				fields['cloudinaryURL'] = result.url;
@@ -96,10 +119,10 @@ router.post('/upload_event', function(req, res){
 				height: 700,
 				crop: 'fit',
 				format: 'png'
-			});
+			}); 
 		}
 	})
-})
+}) */
 
 
 http.listen(port, function(){
@@ -111,7 +134,7 @@ http.listen(port, function(){
 
 
 
-
+/*
 function addEventToFirebase(eventFields, cb){
 	if (eventFields.flierAdded == false){
 		console.log("Pushing data to firebase");
@@ -174,6 +197,6 @@ function sendEmail(firebaseURL){
  			console.log(error);
  		}
  	});
-
 }
 
+*/

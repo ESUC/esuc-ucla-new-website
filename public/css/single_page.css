@@ -2,9 +2,8 @@ main {
 	padding-top: 100px;
 	padding-left: 80px;
 	padding-right: 80px;
-}
-
-
-#engineering-calendar p{
-	margin-bottom: 0px;
+	width: 100% ;
+	max-width: 1400px;
+	margin: 0 auto; 
+	float: none;
 }
