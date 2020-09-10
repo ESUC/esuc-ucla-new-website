@@ -235,6 +235,9 @@ main {
 	.footer-section{
 		text-align: center;
 	}
+	.footer-section-title {
+		text-align: center;
+	}
 }
 
 @media screen and (max-width: 450px)
