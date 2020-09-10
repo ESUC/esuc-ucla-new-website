@@ -54,7 +54,7 @@
 			<div class="row">
 				<div class="col s12 m4 l2 f-tray" style="">
 					<input type="text" id="f-search" onkeyup="search()" placeholder="Search...">
-
+					<div id="orgs-list">
 					<% orgs.forEach(function(o) { %>
 						<p>
 							<input type="checkbox" class="filled-in f-check" id="<%= o.className %>-f" onchange="update_filter()"
@@ -62,7 +62,7 @@
 							<label for="<%= o.className %>-f"><%= o.name %></label>
 						</p>
 					<% }); %>
-
+					</div>
 					<!-- TODO - add check all / uncheck all buttons -->
 				</div>
 				<div class="col s12 m8 l10">
@@ -91,23 +91,25 @@
 	<% include partials/footer %>
 
 	<script>
-		var class_names = ['acm-general', 'aiaa', 'alche', 'asce', 'bmes', 'bhs', 'uip', 'ite', 'hkn', 'swe', 'ieee', 'upe'];
+		// var class_names = ['acm-general', 'aiaa', 'alche', 'asce', 'bmes', 'bhs', 'uip', 'ite', 'hkn', 'swe', 'ieee', 'upe'];
 		
+		var orgs_list = <%- JSON.stringify(orgs) %>;
+
 		let status = new Map();
 
 		// Start with everything checked
-		class_names.forEach(element => status.set(element, true));
+		orgs_list.forEach(element => status.set(element.className, true));
 
 		function update_filter() {
-			class_names.forEach(element => {
-				if (document.getElementById(element + '-f') != null) {
-					var new_status = document.getElementById(element + '-f').checked;
-					if (status.get(element) != new_status) {
-						status.set(element, new_status);
+			orgs_list.forEach(element => {
+				if (document.getElementById(element.className + '-f') != null) {
+					var new_status = document.getElementById(element.className + '-f').checked;
+					if (status.get(element.className) != new_status) {
+						status.set(element.className, new_status);
 						if (new_status)
-							$("." + element).fadeIn();
+							$("." + element.className).fadeIn();
 						else
-							$("." + element).fadeOut();
+							$("." + element.className).fadeOut();
 					}
 				}
 			});
@@ -185,68 +187,7 @@
 						window.open(info.event.url);
 					}
 				},
-				eventSources: [
-					{
-						googleCalendarId: 'acmbruins@gmail.com',
-						className: 'acm-general',
-						color: '#3B59ED'
-					},
-					{
-						googleCalendarId: 'aiaaucla@gmail.com',
-						className: 'aiaa',
-						color: '#CECFCF'
-					},
-					{
-						googleCalendarId: 'mg89t43rdbasj67i2jpekov5ag@group.calendar.google.com',
-						className: 'alche',
-						color: '#81C5E2'
-					},
-					{
-						googleCalendarId: 'tn50r7iie1olab1kclhbjcj6rc@group.calendar.google.com',
-						className: 'asce',
-						color: '#1FCBE9'
-					},
-					{
-						googleCalendarId: 'bmesucla@gmail.com',
-						className: 'bmes',
-						color: '#42514C'
-					},
-					{
-						googleCalendarId: 'g.ucla.edu_pm45q293j7dtpnirhfhqcns5u0@group.calendar.google.com',
-						className: 'bhs',
-						color: '#9DD391'
-					},
-					{
-						googleCalendarId: '06des4gl36nhufnptgolsifq78@group.calendar.google.com',
-						className: 'uip',
-						color: '#2b2b2b'
-					},
-					{
-						googleCalendarId: 't30pjp3764ll7nfs2f2ml980bg@group.calendar.google.com',
-						className: 'ite',
-						color: '#E94F1D'
-					},
-					{
-						googleCalendarId: 'hkn.ucla@gmail.com',
-						className: 'hkn',
-						color: '#B80634'
-					},
-					{
-						googleCalendarId: 'm980q306mg3rfvuh7jhm43fr5s@group.calendar.google.com',
-						className: 'swe',
-						color: '#584A6A'
-					},
-					{
-						googleCalendarId: 'umh1upatck4qihkji9k6ntpc9k@group.calendar.google.com',
-						className: 'ieee',
-						color: '#00629B'
-					},
-					{
-						googleCalendarId: 'upe.ucla@gmail.com',
-						className: 'upe',
-						color: '#2E67CF'
-					},
-				]
+				eventSources: orgs_list,
 			});
 			calendar.render();
 		});
