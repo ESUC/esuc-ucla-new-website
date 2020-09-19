@@ -207,3 +207,29 @@ input:not([type]):focus:not([readonly]), input[type=text]:focus:not([readonly]),
     z-index: 0;
 }
 
+#asme-f:checked+label:after {
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #0070AB !important;
+    background-color: #0070AB !important;
+    z-index: 0;
+}
+
+#pies-f:checked+label:after {
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #800000 !important;
+    background-color: #800000 !important;
+    z-index: 0;
+}
+
+#uas-f:checked+label:after {
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #1230c7 !important;
+    background-color: #1230c7 !important;
+    z-index: 0;
+}

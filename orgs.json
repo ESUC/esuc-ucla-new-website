@@ -1,104 +1,122 @@
 [
     {
         "name": "ACM at UCLA",
-        "className": "acm",
         "googleCalendarId": "acmbruins@gmail.com",
+        "className": "acm",
         "color": "#3B59ED"
     },
     {
         "name": "AIAA UCLA",
-        "className": "aiaa",
         "googleCalendarId": "aiaaucla@gmail.com",
+        "className": "aiaa",
         "color": "#031C4B"
     },
     {
         "name": "AIChE Events",
-        "className": "alche",
         "googleCalendarId": "mg89t43rdbasj67i2jpekov5ag@group.calendar.google.com",
+        "className": "alche",
         "color": "#2123c1"
     },
     {
         "name": "ASCE at UCLA",
-        "className": "asce",
         "googleCalendarId": "tn50r7iie1olab1kclhbjcj6rc@group.calendar.google.com",
+        "className": "asce",
         "color": "#209DCB"
     },
     {
         "name": "BEAM",
-        "className": "beam",
         "googleCalendarId": "c_bqm94jh4gmlcp2phse1al8dt68@group.calendar.google.com",
+        "className": "beam",
         "color": "#E8552C"
     },
     {
         "name": "BMES UCLA",
-        "className": "bmes",
         "googleCalendarId": "bmesucla@gmail.com",
+        "className": "bmes",
         "color": "#4385EF"
     },
     {
         "name": "Bruin Home Solutions",
-        "className": "bhs",
         "googleCalendarId": "g.ucla.edu_pm45q293j7dtpnirhfhqcns5u0@group.calendar.google.com",
+        "className": "bhs",
         "color": "#9ED395"
     },
     {
         "name": "CalGeo at UCLA",
-        "className": "calgeo",
         "googleCalendarId": "calgeobruins@gmail.com",
+        "className": "calgeo",
         "color": "#FBE1C1"
     },
     {
         "name": "HKN Events",
-        "className": "hkn",
         "googleCalendarId": "hkn.ucla@gmail.com",
+        "className": "hkn",
         "color": "#737373"
     },
     {
         "name": "IEEE",
-        "className": "ieee",
         "googleCalendarId": "umh1upatck4qihkji9k6ntpc9k@group.calendar.google.com",
+        "className": "ieee",
         "color": "#056298"
     },
     {
         "name": "IEEE WATT",
-        "className": "ieee-watt",
         "googleCalendarId": "wie.ieee.ucla@gmail.com",
+        "className": "ieee-watt",
         "color": "#33B679"
     },
     {
         "name": "iPads: Industry Recruitment",
-        "className": "uip",
         "googleCalendarId": "06des4gl36nhufnptgolsifq78@group.calendar.google.com",
+        "className": "uip",
         "color": "#000000"
     },
     {
         "name": "ITE at UCLA",
-        "className": "ite",
         "googleCalendarId": "t30pjp3764ll7nfs2f2ml980bg@group.calendar.google.com",
+        "className": "ite",
         "color": "#1B6B95"
     },
     {
         "name": "MRS",
-        "className": "mrs",
         "googleCalendarId": "re16eftinu828nfupbmkep8ue0@group.calendar.google.com",
+        "className": "mrs",
         "color": "#73947e"
     },
     {
         "name": "SOLAR",
-        "className": "solar",
         "googleCalendarId": "5fdpt58phm9a6d6n4qkkd2t1n8@group.calendar.google.com",
+        "className": "solar",
         "color": "#ffb81c"
     },
     {
         "name": "SWE",
-        "className": "swe",
         "googleCalendarId": "m980q306mg3rfvuh7jhm43fr5s@group.calendar.google.com",
+        "className": "swe",
         "color": "#584A6A"
     },
     {
         "name": "UPE Events",
-        "className": "upe",
         "googleCalendarId": "upe.ucla@gmail.com",
+        "className": "upe",
         "color": "#333333"
+    },
+    {
+        "name": "ASME",
+        "googleCalendarId": "asme.bruins@gmail.com",
+        "className": "asme",
+        "color": "#0070AB"
+    },
+    {
+        "name": "Pilipinos in Engineering and Science",
+        "googleCalendarId": "pilipinosinengineering@gmail.com",
+        "className": "pies",
+        "color": "#800000"
+    },
+    {
+        "name": "UAS@UCLA",
+        "googleCalendarId": "unmannedsystems.ucla@gmail.com",
+        "className": "uas",
+        "color": "#1230c7"
     }
 ]
