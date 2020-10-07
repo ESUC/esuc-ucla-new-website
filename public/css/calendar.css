@@ -58,8 +58,8 @@ input:not([type]):focus:not([readonly]), input[type=text]:focus:not([readonly]),
     top: 0;
     width: 20px;
     height: 20px;
-    border: 2px solid #3B59ED !important;
-    background-color: #3B59ED !important;
+    border: 2px solid #1E6CFF !important;
+    background-color: #1E6CFF !important;
     z-index: 0;
 }
 
@@ -193,8 +193,8 @@ input:not([type]):focus:not([readonly]), input[type=text]:focus:not([readonly]),
     top: 0;
     width: 20px;
     height: 20px;
-    border: 2px solid #584A6A !important;
-    background-color: #584A6A !important;
+    border: 2px solid #7D6890 !important;
+    background-color: #7D6890 !important;
     z-index: 0;
 }
 
@@ -231,5 +231,41 @@ input:not([type]):focus:not([readonly]), input[type=text]:focus:not([readonly]),
     height: 20px;
     border: 2px solid #1230c7 !important;
     background-color: #1230c7 !important;
+    z-index: 0;
+}
+
+#nova-f:checked+label:after {
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #FFC650 !important;
+    background-color: #FFC650 !important;
+    z-index: 0;
+}
+
+#racing-f:checked+label:after {
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #F2AF0A !important;
+    background-color: #F2AF0A !important;
+    z-index: 0;
+}
+
+#eeri-f:checked+label:after {
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #b22222 !important;
+    background-color: #b22222 !important;
+    z-index: 0;
+}
+
+#nsbe-f:checked+label:after {
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #34a853 !important;
+    background-color: #34a853 !important;
     z-index: 0;
 }

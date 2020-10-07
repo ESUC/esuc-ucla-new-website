@@ -6,7 +6,7 @@ if __name__ == '__main__':
     with open('orgs.json') as f:
         orgs = json.load(f)
 
-    print(orgs)
+    # print(orgs)
 
     for org in orgs:
         print(s.format(org['className'], org['color'], org['color']));
