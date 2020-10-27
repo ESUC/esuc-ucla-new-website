@@ -28,8 +28,6 @@
  	})
 
  	if ($('#landing').length){
- 		console.log("landing exists");
- 		console.log($('nav')[0]);
  		$('nav').css('background-color', 'rgba(100,139,186, 0.8)');
  	}
 
