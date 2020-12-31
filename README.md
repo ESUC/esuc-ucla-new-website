@@ -1,8 +1,10 @@
-# esuc-ucla-new-website
+# ESUC Website
 The official Engineering Society of UCLA website, currently hosted in Heroku. 
 Feel free to check it out [here](http://esuc-website.herokuapp.com/).
 
 ## Contributors:
+2019-2020: Kevin Tang (webmaster)
+
 2017-2018: Kyle Wong (webmaster)
 
 2016-2017: Avi Kejariwal (webmaster), Kyle Wong (intern), Danny Nguyen (intern)
