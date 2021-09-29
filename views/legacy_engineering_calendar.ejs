@@ -1,0 +1,134 @@
+<div id="engineering-calendar">
+  <h2 class="center">Engineering Calendar</h2>
+  <p>
+    The Engineering Calendar contains the comprehensive list of events hosted by
+    various engineering clubs on campus. You can browse through all current,
+    past, and future events, or filter by organization. Click on an event to see
+    more information, and add it to your own calendar!
+  </p>
+  <br />
+
+  <div class="row">
+    <div class="col s12 m4 l2 f-tray" style="">
+      <input
+        type="text"
+        id="f-search"
+        onkeyup="search()"
+        placeholder="Search..."
+      />
+      <div id="orgs-list">
+        <% orgs.forEach(function(o) { %>
+        <p>
+          <input
+            type="checkbox"
+            class="filled-in f-check"
+            id="<%= o.className %>-f"
+            onchange="update_filter()"
+            checked
+          />
+          <label for="<%= o.className %>-f" id="<%= o.className %>-f-l"
+            ><%= o.name %></label
+          >
+        </p>
+        <% }); %>
+      </div>
+      <button type="button" class="f-button f-enable" onclick="setAll(true)">
+        Show All
+      </button>
+      <button type="button" class="f-button f-enable" onclick="setAll(false)">
+        Hide All
+      </button>
+    </div>
+    <div class="col s12 m8 l10">
+      <div id="calendar"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+  var orgs_list = <%- JSON.stringify(orgs) %>;
+
+  let status = new Map();
+
+  // Start with everything checked
+  orgs_list.forEach(element => status.set(element.className, true));
+
+  function update_filter() {
+      orgs_list.forEach(element => {
+          if (document.getElementById(element.className + '-f') != null) {
+              var new_status = document.getElementById(element.className + '-f').checked;
+              if (status.get(element.className) != new_status) {
+                  status.set(element.className, new_status);
+                  if (new_status)
+                      $("." + element.className).fadeIn();
+                  else
+                      $("." + element.className).fadeOut();
+              }
+          }
+      });
+  }
+
+  function update_events() {
+      for (let [key, value] of status) {
+          if (value) {
+              //$("." + element).show();
+          } else {
+              $("." + key).css("display", "none");
+          }
+
+      }
+  }
+
+  function search() {
+      let input = document.getElementById("f-search").value.replace(/[^0-9a-z]/gi, '').toLowerCase();
+      let checkboxes = document.getElementsByClassName("f-check");
+      for (let item of checkboxes) {
+          if (item.id.search(input) == -1) {
+              document.getElementById(item.id).style.display = 'none';
+              document.getElementById(item.id + '-l').style.display = 'none';
+          } else {
+              document.getElementById(item.id).style.display = 'inline-block';
+              document.getElementById(item.id + '-l').style.display = 'inline-block';
+          }
+      }
+  }
+
+  function setAll(state) {
+      let checkboxes = document.getElementsByClassName("f-check");
+      for (var checkbox of checkboxes) {
+          checkbox.checked = state;
+      }
+      update_filter();
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+			var calendarEl = document.getElementById('calendar');
+			calendar = new FullCalendar.Calendar(calendarEl, {
+				initialView: 'dayGridMonth',
+				themeSystem: 'standard',
+				height: '70vh',
+				googleCalendarApiKey: 'AIzaSyAATfuHVUc-akmJe_EkYkvhvBMwXPk7agw',
+				nowIndicator: 'true',
+				scrollTime: '08:30:00',
+				eventDidMount: function (arg) {
+					let event = arg.event;
+					if (!status.get(event.source.internalEventSource._raw.className)) {
+						$("." + event.source.internalEventSource._raw.className).css("display", "none");
+					}
+				},
+				headerToolbar: {
+					start: 'today prev,next',
+					center: 'title',
+					end: 'dayGridMonth,timeGridWeek,listWeek'
+				},
+				eventClick: function (info) {
+					info.jsEvent.preventDefault(); // don't let the browser navigate
+
+					if (info.event.url) {
+						window.open(info.event.url);
+					}
+				},
+				eventSources: orgs_list,
+			});
+			calendar.render();
+</script>

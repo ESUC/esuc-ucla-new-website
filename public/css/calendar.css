@@ -1,16 +1,14 @@
-
-#engineering-calendar p{
-	max-width: 100vw;
-	max-height: 100vh;
-	margin-bottom: 0px;
+.engineering-calendar p {
+    max-width    : 100vw;
+    max-height   : 100vh;
+    margin-bottom: 0px;
 }
 
-#highlights-calendar p{
-	max-width: 100vw;
-	max-height: 100vh;
-	margin-bottom: 0px;
+#highlights-calendar p {
+    max-width    : 100vw;
+    max-height   : 100vh;
+    margin-bottom: 0px;
 }
-
 
 
 .f-tray {
@@ -18,254 +16,266 @@
 }
 
 .f-button {
-    display: inline-block;
-    height: 2rem;
-    margin-top: 1rem;
-    border: 0.1em solid #FFFFFF;
-    box-sizing: border-box;
-    text-decoration: none;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300;
-    color: #FFFFFF;
+    display         : inline-block;
+    height          : 2rem;
+    margin-top      : 1rem;
+    border          : 0.1em solid #FFFFFF;
+    box-sizing      : border-box;
+    text-decoration : none;
+    font-family     : 'Roboto', sans-serif;
+    font-weight     : 300;
+    color           : #FFFFFF;
     background-color: #2C3E50;
-    text-align: center;
-    transition: all 0.2s;
+    text-align      : center;
+    transition      : all 0.2s;
 }
 
 .f-button:hover {
-    color: #FFFFFF;
+    color           : #FFFFFF;
     background-color: #648bba;
 }
 
 .f-button:focus {
-    color: #FFFFFF;
-    background-color: #2C3E50; 
+    color           : #FFFFFF;
+    background-color: #2C3E50;
 }
 
 #orgs-list {
-    max-height: calc(70vh - 7rem);
-    min-height: calc(70vh - 7rem);
-    overflow-y: scroll;
+    max-height    : calc(70vh - 7rem);
+    min-height    : calc(70vh - 7rem);
+    overflow-y    : scroll;
     padding-bottom: 20px;
 }
 
-input:not([type]):focus:not([readonly]), input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly]), input[type=email]:focus:not([readonly]), input[type=url]:focus:not([readonly]), input[type=time]:focus:not([readonly]), input[type=date]:focus:not([readonly]), input[type=datetime]:focus:not([readonly]), input[type=datetime-local]:focus:not([readonly]), input[type=tel]:focus:not([readonly]), input[type=number]:focus:not([readonly]), input[type=search]:focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {
+input:not([type]):focus:not([readonly]),
+input[type=text]:focus:not([readonly]),
+input[type=password]:focus:not([readonly]),
+input[type=email]:focus:not([readonly]),
+input[type=url]:focus:not([readonly]),
+input[type=time]:focus:not([readonly]),
+input[type=date]:focus:not([readonly]),
+input[type=datetime]:focus:not([readonly]),
+input[type=datetime-local]:focus:not([readonly]),
+input[type=tel]:focus:not([readonly]),
+input[type=number]:focus:not([readonly]),
+input[type=search]:focus:not([readonly]),
+textarea.materialize-textarea:focus:not([readonly]) {
     border-bottom: 1px solid #648bba !important;
-    box-shadow: 0 1px 0 0 #648bba !important;
+    box-shadow   : 0 1px 0 0 #648bba !important;
 }
 
 #acm-f:checked+label:after {
-    top: 0;
-    width: 20px;
-    height: 20px;
-    border: 2px solid #1E6CFF !important;
+    top             : 0;
+    width           : 20px;
+    height          : 20px;
+    border          : 2px solid #1E6CFF !important;
     background-color: #1E6CFF !important;
-    z-index: 0;
+    z-index         : 0;
 }
 
 #aiaa-f:checked+label:after {
-    top: 0;
-    width: 20px;
-    height: 20px;
-    border: 2px solid #031C4B !important;
+    top             : 0;
+    width           : 20px;
+    height          : 20px;
+    border          : 2px solid #031C4B !important;
     background-color: #031C4B !important;
-    z-index: 0;
+    z-index         : 0;
 }
 
 #alche-f:checked+label:after {
-    top: 0;
-    width: 20px;
-    height: 20px;
-    border: 2px solid #2123c1 !important;
+    top             : 0;
+    width           : 20px;
+    height          : 20px;
+    border          : 2px solid #2123c1 !important;
     background-color: #2123c1 !important;
-    z-index: 0;
+    z-index         : 0;
 }
 
 #asce-f:checked+label:after {
-    top: 0;
-    width: 20px;
-    height: 20px;
-    border: 2px solid #209DCB !important;
+    top             : 0;
+    width           : 20px;
+    height          : 20px;
+    border          : 2px solid #209DCB !important;
     background-color: #209DCB !important;
-    z-index: 0;
+    z-index         : 0;
 }
 
 #beam-f:checked+label:after {
-    top: 0;
-    width: 20px;
-    height: 20px;
-    border: 2px solid #E8552C !important;
+    top             : 0;
+    width           : 20px;
+    height          : 20px;
+    border          : 2px solid #E8552C !important;
     background-color: #E8552C !important;
-    z-index: 0;
+    z-index         : 0;
 }
 
 #bmes-f:checked+label:after {
-    top: 0;
-    width: 20px;
-    height: 20px;
-    border: 2px solid #4385EF !important;
+    top             : 0;
+    width           : 20px;
+    height          : 20px;
+    border          : 2px solid #4385EF !important;
     background-color: #4385EF !important;
-    z-index: 0;
+    z-index         : 0;
 }
 
 #bhs-f:checked+label:after {
-    top: 0;
-    width: 20px;
-    height: 20px;
-    border: 2px solid #9ED395 !important;
+    top             : 0;
+    width           : 20px;
+    height          : 20px;
+    border          : 2px solid #9ED395 !important;
     background-color: #9ED395 !important;
-    z-index: 0;
+    z-index         : 0;
 }
 
 #calgeo-f:checked+label:after {
-    top: 0;
-    width: 20px;
-    height: 20px;
-    border: 2px solid #FBE1C1 !important;
+    top             : 0;
+    width           : 20px;
+    height          : 20px;
+    border          : 2px solid #FBE1C1 !important;
     background-color: #FBE1C1 !important;
-    z-index: 0;
+    z-index         : 0;
 }
 
 #hkn-f:checked+label:after {
-    top: 0;
-    width: 20px;
-    height: 20px;
-    border: 2px solid #737373 !important;
+    top             : 0;
+    width           : 20px;
+    height          : 20px;
+    border          : 2px solid #737373 !important;
     background-color: #737373 !important;
-    z-index: 0;
+    z-index         : 0;
 }
 
 #ieee-f:checked+label:after {
-    top: 0;
-    width: 20px;
-    height: 20px;
-    border: 2px solid #056298 !important;
+    top             : 0;
+    width           : 20px;
+    height          : 20px;
+    border          : 2px solid #056298 !important;
     background-color: #056298 !important;
-    z-index: 0;
+    z-index         : 0;
 }
 
 #ieee-watt-f:checked+label:after {
-    top: 0;
-    width: 20px;
-    height: 20px;
-    border: 2px solid #33B679 !important;
+    top             : 0;
+    width           : 20px;
+    height          : 20px;
+    border          : 2px solid #33B679 !important;
     background-color: #33B679 !important;
-    z-index: 0;
+    z-index         : 0;
 }
 
 #uip-f:checked+label:after {
-    top: 0;
-    width: 20px;
-    height: 20px;
-    border: 2px solid #000000 !important;
+    top             : 0;
+    width           : 20px;
+    height          : 20px;
+    border          : 2px solid #000000 !important;
     background-color: #000000 !important;
-    z-index: 0;
+    z-index         : 0;
 }
 
 #ite-f:checked+label:after {
-    top: 0;
-    width: 20px;
-    height: 20px;
-    border: 2px solid #1B6B95 !important;
+    top             : 0;
+    width           : 20px;
+    height          : 20px;
+    border          : 2px solid #1B6B95 !important;
     background-color: #1B6B95 !important;
-    z-index: 0;
+    z-index         : 0;
 }
 
 #mrs-f:checked+label:after {
-    top: 0;
-    width: 20px;
-    height: 20px;
-    border: 2px solid #73947e !important;
+    top             : 0;
+    width           : 20px;
+    height          : 20px;
+    border          : 2px solid #73947e !important;
     background-color: #73947e !important;
-    z-index: 0;
+    z-index         : 0;
 }
 
 #solar-f:checked+label:after {
-    top: 0;
-    width: 20px;
-    height: 20px;
-    border: 2px solid #ffb81c !important;
+    top             : 0;
+    width           : 20px;
+    height          : 20px;
+    border          : 2px solid #ffb81c !important;
     background-color: #ffb81c !important;
-    z-index: 0;
+    z-index         : 0;
 }
 
 #swe-f:checked+label:after {
-    top: 0;
-    width: 20px;
-    height: 20px;
-    border: 2px solid #7D6890 !important;
+    top             : 0;
+    width           : 20px;
+    height          : 20px;
+    border          : 2px solid #7D6890 !important;
     background-color: #7D6890 !important;
-    z-index: 0;
+    z-index         : 0;
 }
 
 #upe-f:checked+label:after {
-    top: 0;
-    width: 20px;
-    height: 20px;
-    border: 2px solid #333333 !important;
+    top             : 0;
+    width           : 20px;
+    height          : 20px;
+    border          : 2px solid #333333 !important;
     background-color: #333333 !important;
-    z-index: 0;
+    z-index         : 0;
 }
 
 #asme-f:checked+label:after {
-    top: 0;
-    width: 20px;
-    height: 20px;
-    border: 2px solid #0070AB !important;
+    top             : 0;
+    width           : 20px;
+    height          : 20px;
+    border          : 2px solid #0070AB !important;
     background-color: #0070AB !important;
-    z-index: 0;
+    z-index         : 0;
 }
 
 #pies-f:checked+label:after {
-    top: 0;
-    width: 20px;
-    height: 20px;
-    border: 2px solid #800000 !important;
+    top             : 0;
+    width           : 20px;
+    height          : 20px;
+    border          : 2px solid #800000 !important;
     background-color: #800000 !important;
-    z-index: 0;
+    z-index         : 0;
 }
 
 #uas-f:checked+label:after {
-    top: 0;
-    width: 20px;
-    height: 20px;
-    border: 2px solid #1230c7 !important;
+    top             : 0;
+    width           : 20px;
+    height          : 20px;
+    border          : 2px solid #1230c7 !important;
     background-color: #1230c7 !important;
-    z-index: 0;
+    z-index         : 0;
 }
 
 #nova-f:checked+label:after {
-    top: 0;
-    width: 20px;
-    height: 20px;
-    border: 2px solid #FFC650 !important;
+    top             : 0;
+    width           : 20px;
+    height          : 20px;
+    border          : 2px solid #FFC650 !important;
     background-color: #FFC650 !important;
-    z-index: 0;
+    z-index         : 0;
 }
 
 #racing-f:checked+label:after {
-    top: 0;
-    width: 20px;
-    height: 20px;
-    border: 2px solid #F2AF0A !important;
+    top             : 0;
+    width           : 20px;
+    height          : 20px;
+    border          : 2px solid #f2af0a !important;
     background-color: #F2AF0A !important;
-    z-index: 0;
+    z-index         : 0;
 }
 
 #eeri-f:checked+label:after {
-    top: 0;
-    width: 20px;
-    height: 20px;
-    border: 2px solid #b22222 !important;
+    top             : 0;
+    width           : 20px;
+    height          : 20px;
+    border          : 2px solid #b22222 !important;
     background-color: #b22222 !important;
-    z-index: 0;
+    z-index         : 0;
 }
 
 #nsbe-f:checked+label:after {
-    top: 0;
-    width: 20px;
-    height: 20px;
-    border: 2px solid #34a853 !important;
+    top             : 0;
+    width           : 20px;
+    height          : 20px;
+    border          : 2px solid #34a853 !important;
     background-color: #34a853 !important;
-    z-index: 0;
+    z-index         : 0;
 }

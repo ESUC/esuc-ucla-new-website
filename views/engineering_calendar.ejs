@@ -16,43 +16,33 @@
 		<br>
 		<br>
 
-		<div id="engineering-calendar">
-			<h2 class="center">Engineering Calendar</h2>
-			<p>The Engineering Calendar contains the comprehensive list of events hosted by various engineering clubs on
-				campus. You can browse through all current, past, and future events, or filter by organization. Click on an event to see more information, and add it to your own calendar! </p>
-			<br>
-
-			<div class="row">
-				<div class="col s12 m4 l2 f-tray" style="">
-					<input type="text" id="f-search" onkeyup="search()" placeholder="Search...">
-					<div id="orgs-list">
-						<% orgs.forEach(function(o) { %>
-						<p>
-							<input type="checkbox" class="filled-in f-check" id="<%= o.className %>-f"
-								onchange="update_filter()" checked />
-							<label for="<%= o.className %>-f" id="<%= o.className %>-f-l"><%= o.name %></label>
-						</p>
-						<% }); %>
-					</div>
-					<button type="button" class="f-button f-enable" onclick="setAll(true)">Show All</button>
-					<button type="button" class="f-button f-enable" onclick="setAll(false)">Hide All</button>
-				</div>
-				<div class="col s12 m8 l10">
-					<div id='calendar'></div>
-				</div>
-			</div>
-		</div>
-		<br>
-		<br>
 
 		<div id="highlights-calendar">
 			<h2 class="center">Highlights Calendar</h2>
-			<p>The Highlights Calendar gives a spotlight to the most prominent events taking place in the engineering student community, including various organization's general meetings, career fairs, and more!</p>
+			<p>The Highlights Calendar gives a spotlight to the most prominent events taking place in the engineering student community, including various organization's general meetings, career fairs, town halls, and more!</p>
 			<div class="section col-md-12">
 				<div id='h-calendar'></div>
 			</div>
 		</div>
 
+		<br>
+		<br>
+		<div class="engineering-calendar">
+			<h2 class="center">Workshops, Speakers, & Other Calendar</h2>
+			<p>The Workshops, Speakers, & Other Calendar provides info about other events put on by our engineering organizations, including various workshops, speaker panels, and more!</p>
+			<div class="section col-md-12">
+				<div id='calendar'></div>
+			</div>
+		</div>
+		<br>
+		<br>
+		<div class="engineering-calendar">
+			<h2 class="center">ESUC Lounge Reservations</h2>
+			<p>Check here for ESUC Lounge availability</p>
+			<div class="section col-md-12">
+				<div id='r-calendar'></div>
+			</div>
+		</div>
 		<br>
 		<br>
 
@@ -63,80 +53,17 @@
 
 	<script>
 		// var class_names = ['acm-general', 'aiaa', 'alche', 'asce', 'bmes', 'bhs', 'uip', 'ite', 'hkn', 'swe', 'ieee', 'upe'];
-
-		var orgs_list = <%- JSON.stringify(orgs) %>;
-
-		let status = new Map();
-
-		// Start with everything checked
-		orgs_list.forEach(element => status.set(element.className, true));
-
-		function update_filter() {
-			orgs_list.forEach(element => {
-				if (document.getElementById(element.className + '-f') != null) {
-					var new_status = document.getElementById(element.className + '-f').checked;
-					if (status.get(element.className) != new_status) {
-						status.set(element.className, new_status);
-						if (new_status)
-							$("." + element.className).fadeIn();
-						else
-							$("." + element.className).fadeOut();
-					}
-				}
-			});
-		}
-
-		function update_events() {
-			for (let [key, value] of status) {
-				if (value) {
-					//$("." + element).show();
-				} else {
-					$("." + key).css("display", "none");
-				}
-
-			}
-		}
-
-		function search() {
-			let input = document.getElementById("f-search").value.replace(/[^0-9a-z]/gi, '').toLowerCase();
-			let checkboxes = document.getElementsByClassName("f-check");
-			for (let item of checkboxes) {
-				if (item.id.search(input) == -1) {
-					document.getElementById(item.id).style.display = 'none';
-					document.getElementById(item.id + '-l').style.display = 'none';
-				} else {
-					document.getElementById(item.id).style.display = 'inline-block';
-					document.getElementById(item.id + '-l').style.display = 'inline-block';
-				}
-			}
-		}
-
-		function setAll(state) {
-			let checkboxes = document.getElementsByClassName("f-check");
-			for (var checkbox of checkboxes) {
-				checkbox.checked = state;
-			}
-			update_filter();
-		}
-
-
 		var calendar = {};
 
 		document.addEventListener('DOMContentLoaded', function () {
 			var calendarEl = document.getElementById('calendar');
 			calendar = new FullCalendar.Calendar(calendarEl, {
-				initialView: 'dayGridMonth',
+				initialView: 'timeGridWeek',
 				themeSystem: 'standard',
 				height: '70vh',
 				googleCalendarApiKey: 'AIzaSyAATfuHVUc-akmJe_EkYkvhvBMwXPk7agw',
 				nowIndicator: 'true',
-				scrollTime: '08:30:00',
-				eventDidMount: function (arg) {
-					let event = arg.event;
-					if (!status.get(event.source.internalEventSource._raw.className)) {
-						$("." + event.source.internalEventSource._raw.className).css("display", "none");
-					}
-				},
+				scrollTime: '12:30:00',
 				headerToolbar: {
 					start: 'today prev,next',
 					center: 'title',
@@ -149,7 +76,11 @@
 						window.open(info.event.url);
 					}
 				},
-				eventSources: orgs_list,
+				eventSources: [
+					{
+						googleCalendarId: '1nqab59ggjj4l7ne3j1l54qapg@group.calendar.google.com'
+					},
+				]
 			});
 			calendar.render();
 
@@ -160,7 +91,7 @@
 				height: '70vh',
 				googleCalendarApiKey: 'AIzaSyAATfuHVUc-akmJe_EkYkvhvBMwXPk7agw',
 				nowIndicator: 'true',
-				scrollTime: '08:30:00',
+				scrollTime: '12:30:00',
 				headerToolbar: {
 					start: 'today prev,next',
 					center: 'title',
@@ -174,11 +105,38 @@
 				},
 				eventSources: [
 					{
-						googleCalendarId: 'esuc.ucla.publicity@gmail.com'
+						googleCalendarId: 'gklf3v6speni9f9lbc8cnlrp4o@group.calendar.google.com'
 					},
 				]
 			});
 			highlightsC.render();
+
+			var reservationsEl = document.getElementById('r-calendar');
+			reservationsC = new FullCalendar.Calendar(reservationsEl, {
+				initialView: 'dayGridMonth',
+				themeSystem: 'standard',
+				height: '70vh',
+				googleCalendarApiKey: 'AIzaSyAATfuHVUc-akmJe_EkYkvhvBMwXPk7agw',
+				nowIndicator: 'true',
+				scrollTime: '12:30:00',
+				headerToolbar: {
+					start: 'today prev,next',
+					center: 'title',
+					end: 'dayGridMonth,timeGridWeek,listWeek'
+				},
+				eventClick: function (info) {
+					info.jsEvent.preventDefault(); // don't let the browser navigate
+					if (info.event.url) {
+						window.open(info.event.url);
+					}
+				},
+				eventSources: [
+					{
+						googleCalendarId: '1lgmciosqf4vmr6gj8v3gvl0qs@group.calendar.google.com'
+					},
+				]
+			});
+			reservationsC.render();
 		});
 
 
