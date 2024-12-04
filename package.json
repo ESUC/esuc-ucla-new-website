@@ -29,6 +29,6 @@
     "firebase": "^3.6.4",
     "formidable": "^1.0.17",
     "sendgrid": "^4.7.1",
-    "validator": "^6.2.0"
+    "validator": "^13.7.0"
   }
 }
